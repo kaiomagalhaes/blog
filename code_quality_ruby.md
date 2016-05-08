@@ -21,4 +21,3 @@ feitos com Ruby/Rails, sendo assim definimos a utilização de um conjunto
 minimo de gemas em todos os projetos para garantir um mínimo de
 segurança e manutenibilidade:
 
-//TODO
