@@ -52,3 +52,10 @@ O Brakeman faz uma analise está no código buscando falhas de segurança
 no mesmo, na [Codelitt](codelitt.com) nossa politica é de 0 warnings,
 esse é o nosso primeiro passo na build, caso alguma brecha de segurança
 seja encontrada a mesma irá falhar.
+
+###### [Dawnscanner](https://github.com/thesp0nge/dawnscanner)
+
+O Dawnscanner é outra gema que faz analise estática no código em busca
+de falhas na segurança.
+
+
