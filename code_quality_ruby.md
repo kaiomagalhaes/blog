@@ -28,12 +28,19 @@ segurança e manutenibilidade:
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
-
 O Rubocop faz uma análise estática no código buscando por 'ofenças' á
 boas práticas definidas pela comunidade, tails como: Complexidade
 excessiva em um método, numero de linhas de uma classe, numero de
 caracteres em uma linha e etc. Além de nos mostrar os problemas do
 código ele nos fornece uma autocorreção simples que pode ser
 customizada.
+Na [Codelitt](codelitt.com) nós temos uma política de 0 warnings, no
+nosso CI antes de fazer a build o rubocop é ativado, caso alguma ofença
+seja encontrada a mesma falha antes mesmo de rodar os testes.
 
+##### [Rubycritic](https://github.com/whitesmith/rubycritic)
+
+O Rubycritic é outra ferramenta de análise estática, este além de
+avaliar os códigos nos fornece dados como código duplicado e
+complexidade.
 
