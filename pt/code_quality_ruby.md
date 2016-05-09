@@ -58,4 +58,16 @@ seja encontrada a mesma irá falhar.
 O Dawnscanner é outra gema que faz analise estática no código em busca
 de falhas na segurança.
 
+###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
 
+O bundler audit é uma gem que verifica o Gemfile.lock e busca por falhas
+nas gemas utilizadas. Durante o desenvolvimento de uma aplicação é comum
+que nos importemos com falhas de segurança no projeto, no entanto caso
+uma gema utilizada esteja comprometida todo o projeto também estará.
+
+###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
+
+O bundler audit é uma gem que verifica o Gemfile.lock e busca por falhas
+nas gemas utilizadas. Durante o desenvolvimento de uma aplicação é comum
+que nos importemos com falhas de segurança no projeto, no entanto caso
+uma gema utilizada esteja comprometida todo o projeto também estará.
