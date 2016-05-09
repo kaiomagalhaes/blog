@@ -25,7 +25,7 @@ feitos com Ruby/Rails, sendo assim definimos a utilização de um conjunto
 minimo de gemas em todos os projetos para garantir um mínimo de
 segurança e manutenibilidade:
 
-
+#### Qualidade de código
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
 O Rubocop faz uma análise estática no código buscando por 'ofenças' á
@@ -44,3 +44,11 @@ O Rubycritic é outra ferramenta de análise estática, este além de
 avaliar os códigos nos fornece dados como código duplicado e
 complexidade.
 
+#### Segurança
+
+###### [Brakeman](https://github.com/presidentbeef/brakeman)
+
+O Brakeman faz uma analise está no código buscando falhas de segurança
+no mesmo, na [Codelitt](codelitt.com) nossa politica é de 0 warnings,
+esse é o nosso primeiro passo na build, caso alguma brecha de segurança
+seja encontrada a mesma irá falhar.
