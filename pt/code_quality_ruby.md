@@ -32,9 +32,9 @@ muito tempo para entender o que está sendo feito.
 Nosso código tem que ser **organizado** de forma fazer sentido no
 arquiteturalmente ex:
 
-  Nomeclatura das classes
-  Nomeclatura dos métodos
-  Classes com objetivo semelhantes agrupadas em módulos
+  1. Nomeclatura das classes
+  2. Nomeclatura dos métodos
+  3. Classes com objetivo semelhantes agrupadas em módulos
 etc
 
 Nosso código tem que ser manutenível. Por mais que trabalhemos com
