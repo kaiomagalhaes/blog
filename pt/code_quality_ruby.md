@@ -35,9 +35,9 @@ arquiteturalmente ex:
   1. Nomeclatura das classes
   2. Nomeclatura dos métodos
   3. Classes com objetivo semelhantes agrupadas em módulos
-etc
+  4. Entre outros
 
-Nosso código tem que ser manutenível. Por mais que trabalhemos com
+Nosso código tem que ser **manutenível**. Por mais que trabalhemos com
 startups nós nos preocupamos com a continuidade dos projetos de forma
 que seja possivel economizar tempo caso alterações sejam necessárias no
 futuro.
