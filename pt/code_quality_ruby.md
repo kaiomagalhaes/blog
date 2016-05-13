@@ -155,6 +155,13 @@ a removemos de nossas aplicações.
 
 #### Cobertura de código
 
+Cobertura de código é algo importante pois a partir desse dado nós podemos
+garantir que a aplicação está sendo minimamente testada. Vale ressaltar que
+isso não garante que os pontos críticos da aplicação estão sendo avaliados,
+o que é o nosso foco aqui: Garantir que tudo o que pode dar algum tipo de 
+problema seja testado para que fique claro quando alguma implementação o 
+quebrar.
+
 ##### [Simplecov](https://github.com/colszowka/simplecov)
 
 O SimpleCov é uma gema que faz uma análise dinâmica da cobertura de
@@ -165,7 +172,3 @@ uma porcentagem mínima não seja atingida.
 Aqui na [Codelitt](codelitt.com) definimos que o mínimo de cobertura
 deverá ser 90%, assim garantimos sempre que nossos projetos estejam
 sendo sendo bem testados.
-
-Vale lembrar que essa cobertura conta apenas linhas de código e não
-nós, então mesmo que a cobertura esteja alta deve-se ficar atento se
-todos os ramos estão sendo verificados.
