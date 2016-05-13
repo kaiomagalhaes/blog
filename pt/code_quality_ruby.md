@@ -78,9 +78,12 @@ inicialmente ele apontou 1400 warnings, após a utilização da
 autocorreção  esse número pulou para 214, ou seja, do valor inicial 
 somente uma pequena parcela não foi corrigida automaticamente.
 
-Na [Codelitt](codelitt.com) nós temos uma política de 0 warnings no
-nosso CI. Antes de fazer a build o rubocop é ativado, caso alguma ofensa
-seja encontrada a mesma falha antes mesmo de rodar os testes.
+Na [Codelitt](codelitt.com) nós o utilizamos para garantir a aplicação
+das boas práticas, por mais que tenhamos bons desenvolvedores muitas
+vezes não percebemos pequenos detalhes como espaçamento, tamanho de linha,
+a não utilização de uma variavel e etc. Temos uma política de 0 warnings 
+no nosso CI. Antes de fazer a build o rubocop é ativado, e caso alguma ofensa
+seja encontrada a mesma falha imediatamente.
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
