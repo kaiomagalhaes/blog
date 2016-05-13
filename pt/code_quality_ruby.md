@@ -22,6 +22,26 @@ feitos com Ruby/Rails, sendo assim definimos a utilização de um conjunto
 segurança e manutenibilidade:
 
 #### Qualidade de código
+
+Sobre qualidade de código nós focamos em três pontos chave: Leitura,
+organização e manutenção.
+
+Nosso código tem que ser legível de forma que o desenvolvedor não gaste
+muito tempo para entender o que está sendo feito.
+
+Nosso código tem que ser organizado de forma fazer sentido no
+arquiteturalmente ex:
+
+Nomeclatura das classes
+Nomeclatura dos métodos
+Classes com objetivo semelhantes agrupadas em módulos
+etc
+
+Nosso código tem que ser manutenível. Por mais que trabalhemos com
+startups nós nos preocupamos com a continuidade dos projetos de forma
+que seja possivel economizar tempo caso alterações sejam necessárias no
+futuro.
+
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
 O Rubocop faz uma análise estática no código buscando por 'ofensas' á
@@ -30,7 +50,7 @@ excessiva em um método, numero de linhas de uma classe, numero de
 caracteres em uma linha e etc.
 
 As fontes oficiais de boas práticas são: [Ruby style
-guid](https://github.com/bbatsov/ruby-style-guide) e [Rails style
+guide](https://github.com/bbatsov/ruby-style-guide) e [Rails style
 guide](https://github.com/bbatsov/rails-style-guide)
 
 Além de nos mostrar os problemas do código ele nos fornece um ótimo
@@ -54,15 +74,16 @@ O ponto alto dessa gema são as análises de codigo duplicado e
 complexidade, como pode ser visto na imagem do relatório abaixo:
 
 ![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8
-"ruby critics image example")
-
+"Ruby Critics image example")
 
 #### Segurança
 
 ###### [Brakeman](https://github.com/presidentbeef/brakeman)
 
 O Brakeman faz uma analise estática no código buscando falhas de segurança
-no mesmo, na [Codelitt](codelitt.com) nossa politica é de 0 warnings,
+no mesmo.
+
+Aqui na [Codelitt](codelitt.com) nossa politica é de 0 warnings,
 esse é o nosso primeiro passo na build, caso alguma brecha de segurança
 seja encontrada a mesma irá falhar.
 
