@@ -53,7 +53,7 @@ fornece uma visão geral do projeto e uma visão por classes.
 O ponto alto dessa gema são as análises de codigo duplicado e
 complexidade, como pode ser visto na imagem do relatório abaixo:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8
 "ruby critics image example")
 
 
