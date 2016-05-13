@@ -56,7 +56,7 @@ guide](https://github.com/bbatsov/rails-style-guide)
 Ele não só possui uma gama imensa de boas práticas pré definidas como
 também nos permite a customização das mesmas, como por exemplo: 
 
-``` ruby
+```
 Rails:
   Enabled: true
 
