@@ -44,10 +44,10 @@ futuro.
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
-O Rubocop faz uma análise estática no código buscando por 'ofensas' (onde cada uma gera uma warning) á
-boas práticas definidas pela comunidade, tails como: Complexidade
-excessiva em um método, numero de linhas de uma classe, numero de
-caracteres em uma linha e etc.
+O Rubocop faz uma análise estática no código buscando por 'ofensas' 
+(onde cada uma gera uma warning) á boas práticas definidas pela comunidade,
+tails como: Complexidade excessiva em um método, numero de linhas de uma 
+classe, numero de caracteres em uma linha e etc.
 
 As fontes oficiais de boas práticas são: [Ruby style
 guide](https://github.com/bbatsov/ruby-style-guide) e [Rails style
@@ -101,25 +101,40 @@ complexidade, como pode ser visto na imagem do relatório abaixo:
 "Ruby Critics image example")
 
 [Codelitt](codelitt.com) nos preocupamos bastante com o principio
-[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) e essa
-gema as análises de code smells e código duplicado nos auxiliam 
+[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) e
+as análises de code smells e código duplicado nos auxiliam 
 em sua aplicação.
 
 #### Segurança
+
+Como trabalhamos com projetos que vão desde de simples sites como sistemas
+que envolvem transações financeiras, mantemos por padrão uma grande
+preocupação com segurança.
+
+Além de práticas em servidores e cuidados com dados sensiveis, obviamente
+não podemos deixar de nos preocupar com ataques feitos ás nossas aplicações
+como por exemplo: DDOS, SQL Injection e etc. Para garantir que
+nossas aplicações estejam minimamente seguras nós utilizamos as seguintes
+gemas:
 
 ###### [Brakeman](https://github.com/presidentbeef/brakeman)
 
 O Brakeman faz uma analise estática no código buscando falhas de segurança
 no mesmo.
 
-Aqui na [Codelitt](codelitt.com) nossa politica é de 0 warnings,
+Aqui na [Codelitt](codelitt.com) nossa politica é de 0 warnings. Sendo
 esse é o nosso primeiro passo na build, caso alguma brecha de segurança
-seja encontrada a mesma irá falhar.
+seja encontrada o projeto nem mesmo é construido.
 
 ###### [Dawnscanner](https://github.com/thesp0nge/dawnscanner)
 
 O Dawnscanner é outra gema que faz analise estática no código em busca
 de falhas na segurança.
+Utilizamos ele juntamente com [Brakeman](https://github.com/presidentbeef/brakeman)
+para garantir uma redundância de verificação.
+Somente após a verificação com o [Brakeman](https://github.com/presidentbeef/brakeman) 
+nós verificamos com o [Dawnscanner](https://github.com/thesp0nge/dawnscanner)
+e caso ele encontre a build do projeto irá falhar.
 
 ###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
 
