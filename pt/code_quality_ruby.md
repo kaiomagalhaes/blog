@@ -45,13 +45,17 @@ seja encontrada a mesma falha antes mesmo de rodar os testes.
 
 O Rubycritic é outra ferramenta de análise estática de código. Sendo
 feita a partir da junção de outras três gems
- [Reek](https://github.com/troessner/reek),
+ ([Reek](https://github.com/troessner/reek),
  [Flay](https://github.com/seattlerb/flay) e
- [Flog](https://github.com/seattlerb/flog), ela nos
+ [Flog](https://github.com/seattlerb/flog)), ela nos
 fornece uma visão geral do projeto e uma visão por classes.
 
 O ponto alto dessa gema são as análises de codigo duplicado e
-complexidade.
+complexidade, como pode ser visto na imagem do relatório abaixo:
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png
+"ruby critics image example")
+
 
 #### Segurança
 
