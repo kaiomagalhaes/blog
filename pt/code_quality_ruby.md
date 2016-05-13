@@ -100,7 +100,7 @@ complexidade, como pode ser visto na imagem do relatório abaixo:
 ![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8
 "Ruby Critics image example")
 
-[Codelitt](codelitt.com) nos preocupamos bastante com o principio
+Aqui [Codelitt](codelitt.com) nos preocupamos bastante com o principio
 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) e
 as análises de code smells e código duplicado nos auxiliam 
 em sua aplicação.
@@ -138,10 +138,20 @@ e caso ele encontre a build do projeto irá falhar.
 
 ###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
 
-O bundler audit é uma gem que verifica o Gemfile.lock e busca por falhas
-nas gemas utilizadas. Durante o desenvolvimento de uma aplicação é comum
-que nos importemos com falhas de segurança no projeto, no entanto caso
-uma gema utilizada esteja comprometida todo o projeto também estará.
+O bundler audit é uma gema que verifica o Gemfile.lock e busca por falhas
+reportadas na versão das gemas utilizadas, caso encontre ele nos indica
+uma versão mais segura da mesma caso os problemas tenham sido corrigidos
+e caso não exista, bom, é hora de buscar por uma outra. 
+
+Durante o desenvolvimento de uma aplicação é comum que nos importemos 
+com falhas de segurança no projeto, no entanto caso uma gema utilizada esteja 
+comprometida todo o projeto também estará.
+
+Aqui na [Codelitt](codelitt.com) a verificação com o 
+[Bundler-audit](https://github.com/rubysec/bundler-audit) é o terceiro passo
+antes da build. Quando uma gema está comprometida nós buscamos por uma versão
+que não esteja e caso não a encontremos tratamos de buscar uma outra solução e
+a removemos de nossas aplicações.
 
 #### Cobertura de código
 
