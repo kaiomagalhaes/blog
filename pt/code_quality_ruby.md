@@ -72,16 +72,21 @@ Style/BlockDelimiters:
 
 Além de nos mostrar os problemas do código ele nos fornece um ótimo
 sistema de autocorreção que quando utilizado com rails faz belas
-alterações no projeto, sempre pensando em boas práticas. Assim que 
+alterações no projeto, sempre pensando em boas práticas. Assim que
 descobri essa gema decidi aplica-la em um projeto em desenvolvimento,
-inicialmente ele apontou 1400 warnings, após a utilização da 
-autocorreção  esse número pulou para 214, ou seja, do valor inicial 
+inicialmente ele apontou 1400 warnings, após a utilização da
+autocorreção  esse número pulou para 214, ou seja, do valor inicial
 somente uma pequena parcela não foi corrigida automaticamente.
+
+Juntamente [Rubocop](https://github.com/bbatsov/rubocop) utilizamos o
+[Rubocop Rspec](https://github.com/nevir/rubocop-rspec) sempre que
+utilizamos o [RSpec](https://github.com/rspec/rspec) pois ele possui
+um foco maior nos testes.
 
 Na [Codelitt](codelitt.com) nós o utilizamos para garantir a aplicação
 das boas práticas, por mais que tenhamos bons desenvolvedores muitas
 vezes não percebemos pequenos detalhes como espaçamento, tamanho de linha,
-a não utilização de uma variavel e etc. Temos uma política de 0 warnings 
+a não utilização de uma variavel e etc. Temos uma política de 0 warnings
 no nosso CI. Antes de fazer a build o rubocop é ativado, e caso alguma ofensa
 seja encontrada a mesma falha imediatamente.
 
