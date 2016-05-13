@@ -100,6 +100,11 @@ complexidade, como pode ser visto na imagem do relatório abaixo:
 ![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8
 "Ruby Critics image example")
 
+[Codelitt](codelitt.com) nos preocupamos bastante com o principio
+[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) e essa
+gema as análises de code smells e código duplicado nos auxiliam 
+em sua aplicação.
+
 #### Segurança
 
 ###### [Brakeman](https://github.com/presidentbeef/brakeman)
