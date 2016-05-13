@@ -61,9 +61,19 @@ nas gemas utilizadas. Durante o desenvolvimento de uma aplicação é comum
 que nos importemos com falhas de segurança no projeto, no entanto caso
 uma gema utilizada esteja comprometida todo o projeto também estará.
 
-###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
+#### Cobertura de código
 
-O bundler audit é uma gem que verifica o Gemfile.lock e busca por falhas
-nas gemas utilizadas. Durante o desenvolvimento de uma aplicação é comum
-que nos importemos com falhas de segurança no projeto, no entanto caso
-uma gema utilizada esteja comprometida todo o projeto também estará.
+##### [Simplecov](https://github.com/colszowka/simplecov)
+
+O SimpleCov é uma gema que faz uma análise dinâmica da cobertura de
+código, costumamos utiliza-la em conjunto com o RSpec. Além de oferecer
+relatórios sobre os testes ela também permite que os mesmos falhem caso
+uma porcentagem mínima não seja atingida.
+
+Aqui na [Codelitt](codelitt.com) definimos que o mínimo de cobertura
+deverá ser 90%, assim garantimos sempre que nossos projetos estejam
+sendo sendo bem testados.
+
+Vale lembrar que essa cobertura conta apenas linhas de código e não
+nós, então mesmo que a cobertura esteja alta deve-se ficar atento se
+todos os ramos estão sendo verificados.
