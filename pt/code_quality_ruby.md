@@ -26,10 +26,10 @@ segurança e manutenibilidade:
 Sobre qualidade de código nós focamos em três pontos chave: Leitura,
 organização e manutenção.
 
-Nosso código tem que ser *legível* de forma que o desenvolvedor não gaste
+Nosso código tem que ser **legível** de forma que o desenvolvedor não gaste
 muito tempo para entender o que está sendo feito.
 
-Nosso código tem que ser *organizado* de forma fazer sentido no
+Nosso código tem que ser **organizado** de forma fazer sentido no
 arquiteturalmente ex:
 
   Nomeclatura das classes
