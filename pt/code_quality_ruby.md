@@ -29,8 +29,8 @@ organização e manutenção.
 Nosso código tem que ser **legível** de forma que o desenvolvedor não gaste
 muito tempo para entender o que está sendo feito.
 
-Nosso código tem que ser **organizado** de forma fazer sentido no
-arquiteturalmente ex:
+Nosso código tem que ser **organizado** de forma fazer sentid
+ arquiteturalmente, ex:
 
   1. Nomeclatura das classes
   2. Nomeclatura dos métodos
@@ -52,6 +52,23 @@ caracteres em uma linha e etc.
 As fontes oficiais de boas práticas são: [Ruby style
 guide](https://github.com/bbatsov/ruby-style-guide) e [Rails style
 guide](https://github.com/bbatsov/rails-style-guide)
+
+Ele não só possui uma gama imensa de boas práticas pré definidas como
+também nos permite a customização das mesmas, como por exemplo: 
+
+``` ruby
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+```
 
 Além de nos mostrar os problemas do código ele nos fornece um ótimo
 sistema de autocorreção que quando utilizado com rails faz belas
