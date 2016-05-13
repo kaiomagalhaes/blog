@@ -1,11 +1,11 @@
-Uma grande tendência das statups é a criação de projetos em uma
+Uma grande tendência das startups é a criação de projetos em uma
 velocidade astronômica para que os mesmos possam ser colocados no
 mercado de forma serem validados. Isso sendo feito o destino dos mesmos
 é definido entre uma gama de opções: descontinuado, continuado mas não
 precisa de novas funcionalidades, precisa de manutenção e etc.
 
 Um problema nesse inicio de projeto é a qualidade do mesmo. Certa vez o
-fundador do Likedin Reid Hoffman disse:
+fundador do Linkedin Reid Hoffman disse:
 
 *Se você não tem vergonha da primeira versão do seu produto, você
 demorou demais para lançar.*
@@ -29,7 +29,7 @@ organização e manutenção.
 Nosso código tem que ser **legível** de forma que o desenvolvedor não gaste
 muito tempo para entender o que está sendo feito.
 
-Nosso código tem que ser **organizado** de forma fazer sentid
+Nosso código tem que ser **organizado** de forma fazer sentido
  arquiteturalmente, ex:
 
   1. Nomeclatura das classes
@@ -46,7 +46,7 @@ futuro.
 
 O Rubocop faz uma análise estática no código buscando por 'ofensas' 
 (onde cada uma gera uma warning) á boas práticas definidas pela comunidade,
-tails como: Complexidade excessiva em um método, numero de linhas de uma 
+tais como: Complexidade excessiva em um método, numero de linhas de uma 
 classe, numero de caracteres em uma linha e etc.
 
 As fontes oficiais de boas práticas são: [Ruby style
