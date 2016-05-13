@@ -44,7 +44,7 @@ futuro.
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
-O Rubocop faz uma análise estática no código buscando por 'ofensas' á
+O Rubocop faz uma análise estática no código buscando por 'ofensas' (onde cada uma gera uma warning) á
 boas práticas definidas pela comunidade, tails como: Complexidade
 excessiva em um método, numero de linhas de uma classe, numero de
 caracteres em uma linha e etc.
@@ -72,7 +72,11 @@ Style/BlockDelimiters:
 
 Além de nos mostrar os problemas do código ele nos fornece um ótimo
 sistema de autocorreção que quando utilizado com rails faz belas
-alterações no projeto, sempre pensando em boas práticas.
+alterações no projeto, sempre pensando em boas práticas. Assim que 
+descobri essa gema decidi aplica-la em um projeto em desenvolvimento,
+inicialmente ele apontou 1400 warnings, após a utilização da 
+autocorreção  esse número pulou para 214, ou seja, do valor inicial 
+somente uma pequena parcela não foi corrigida automaticamente.
 
 Na [Codelitt](codelitt.com) nós temos uma política de 0 warnings no
 nosso CI. Antes de fazer a build o rubocop é ativado, caso alguma ofensa
@@ -81,7 +85,7 @@ seja encontrada a mesma falha antes mesmo de rodar os testes.
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
 O Rubycritic é outra ferramenta de análise estática de código. Sendo
-feita a partir da junção de outras três gems
+feita a partir da junção de outras três gemas
  ([Reek](https://github.com/troessner/reek),
  [Flay](https://github.com/seattlerb/flay) e
  [Flog](https://github.com/seattlerb/flog)), ela nos
