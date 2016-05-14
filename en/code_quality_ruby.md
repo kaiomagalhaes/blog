@@ -67,7 +67,7 @@ into
   attr_accessor :my_attribute
 ```
 
-As soon as I found it I applyed it in a huge project that was already in production. It went from 1400 warnings to 2014, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex where some of them even I had some problems to fix.
+As soon as I found it I applyed it in a huge project that was already in production. It went from 1400 warnings to 214, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex where some of them even I had some problems to fix.
  
 Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use
 [Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec specific good practices.
@@ -84,75 +84,44 @@ The mainly use this gem because it offers a overview of the duplicated code and 
 
 ![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8 "Ruby Critic report example")
 
-Aqui [Codelitt](codelitt.com) nos preocupamos bastante com o principio
-[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) e
-as análises de code smells e código duplicado nos auxiliam 
-em sua aplicação.
+Here at [Codelitt](codelitt.com) we care alot with the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and the report that this gem offers is really helpful.
 
-#### Segurança
+#### Security
 
-Como trabalhamos com projetos que vão desde de simples sites como sistemas
-que envolvem transações financeiras, mantemos por padrão uma grande
-preocupação com segurança.
+As we work with projects that goes from simple sites to money transfer systems, so as a pattern we do care about security in all of them.
 
-Além de práticas em servidores e cuidados com dados sensiveis, obviamente
-não podemos deixar de nos preocupar com ataques feitos ás nossas aplicações
-como por exemplo: DDOS, SQL Injection e etc. Para garantir que
-nossas aplicações estejam minimamente seguras nós utilizamos as seguintes
-gemas:
+Besides the server good practices and a special care to sensitive data we obviously can't allows to ignore the harm that may be done in our application by attacks with:  DDOS, SQL Injection and so on. To ensure that our application are minimally secured we use the following gems:
 
 ###### [Brakeman](https://github.com/presidentbeef/brakeman)
 
-O Brakeman faz uma analise estática no código buscando falhas de segurança
-no mesmo.
+Brakeman is gem that checks Ruby on Rails applications for security vulnerabilities, it raises warnings for each one that is found.
 
-Aqui na [Codelitt](codelitt.com) nossa politica é de 0 warnings. Sendo
-esse é o nosso primeiro passo na build, caso alguma brecha de segurança
-seja encontrada o projeto nem mesmo é construido.
+Here at [Codelitt](codelitt.com) our politic is 0 warnings. As it is the first step the our build proccess if it finds any security gap it fails and don't build the project.
 
 ###### [Dawnscanner](https://github.com/thesp0nge/dawnscanner)
 
-O Dawnscanner é outra gema que faz analise estática no código em busca
-de falhas na segurança.
-Utilizamos ele juntamente com [Brakeman](https://github.com/presidentbeef/brakeman)
-para garantir uma redundância de verificação.
-Somente após a verificação com o [Brakeman](https://github.com/presidentbeef/brakeman) 
-nós verificamos com o [Dawnscanner](https://github.com/thesp0nge/dawnscanner)
-e caso ele encontre a build do projeto irá falhar.
+Dawnscanner is a source code scanner designed to review ruby code for security issues. We use it along side with [Brakeman](https://github.com/presidentbeef/brakeman) to ensure a redundancy in our security verification. It runs after [Brakeman](https://github.com/presidentbeef/brakeman) and fails if it finds any gaps as well.
 
 ###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
 
-O bundler audit é uma gema que verifica o Gemfile.lock e busca por falhas
-reportadas na versão das gemas utilizadas, caso encontre ele nos indica
-uma versão mais segura da mesma caso os problemas tenham sido corrigidos
-e caso não exista, bom, é hora de buscar por uma outra. 
+Bundler Audit checks the Gemfile.lock and searches for security gaps reported in each gem used in the project. If it finds any problem in the version of a gem it searches for one that is secure and asks us to update it. If a secure one doesn't exists, well, it is time to search for another.
 
-Durante o desenvolvimento de uma aplicação é comum que nos importemos 
-com falhas de segurança no projeto, no entanto caso uma gema utilizada esteja 
-comprometida todo o projeto também estará.
+While we focus on the general security of our application it is common to forget that the product is a combination of gems and code that we write, so if any gem used in the project has a security gap them it is the enemy inside that we have.
 
-Aqui na [Codelitt](codelitt.com) a verificação com o 
-[Bundler-audit](https://github.com/rubysec/bundler-audit) é o terceiro passo
-antes da build. Quando uma gema está comprometida nós buscamos por uma versão
-que não esteja e caso não a encontremos tratamos de buscar uma outra solução e
-a removemos de nossas aplicações.
+Here at [Codelitt](codelitt.com) the verification with [Bundler-audit](https://github.com/rubysec/bundler-audit) is the thirt step before the build. When it finds a compromised gem we search for a safe version, in the case of we don't find one we just throw it away and search for another way to resolve the problem.
 
-#### Cobertura de código
+#### Code coverage
 
-Cobertura de código é algo importante pois a partir desse dado nós podemos
-garantir que a aplicação está sendo minimamente testada. Vale ressaltar que
-isso não garante que os pontos críticos da aplicação estão sendo avaliados,
-o que é o nosso foco aqui: Garantir que tudo o que pode dar algum tipo de 
-problema seja testado para que fique claro quando alguma implementação o 
-quebrar.
+Code coverage is important because with this data we can ensure that our application is being minimally tested. As it doesn't garantee that the critial points of the application are being tested (which needs to be our main focus) we can't base on it to make sure that our application is safe, but only that something that was working will keep working after some change in the code. 
 
 ##### [Simplecov](https://github.com/colszowka/simplecov)
 
-O SimpleCov é uma gema que faz uma análise dinâmica da cobertura de
-código, costumamos utiliza-la em conjunto com o RSpec. Além de oferecer
-relatórios sobre os testes ela também permite que os mesmos falhem caso
-uma porcentagem mínima não seja atingida.
+SimpleCov is a code coverage analysis tool for Ruby. Besides the offer of good test reports it allows us to configure our tests to fail if a converage percentage is not hit.
 
-Aqui na [Codelitt](codelitt.com) definimos que o mínimo de cobertura
-deverá ser 90%, assim garantimos sempre que nossos projetos estejam
-sendo sendo bem testados.
+Here at [Codelitt](codelitt.com) we define that the minimum code coverage should be at least 90%.
+
+#### Conclusion
+
+It is a resume of our principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find a new gems or good practices. In case you know a better solution or some recommendation please let me know in the comments or by email I would really appreciate it, mine is me@kaiomagalhaes.com
+.
+If you want to know more about our practices take a look in our [repository](https://github.com/codelittinc/incubator-resources) it has a lot of cool stuff.
