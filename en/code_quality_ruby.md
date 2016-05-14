@@ -6,9 +6,7 @@ Once the founder of [LinkedIn](www.linkedin.com) [Reid Hoffman](https://www.link
 
 As it applies to what the consumer will find, it should not be applied to the code. It is clear that we should not take care about of large customizations, but there are small practices that *can* ensure a good maintenance as well as saving time (our most expensive resource) and money.
 
-Here at [Codelitt](codelitt.com) most of our projects are built with 
-Ruby/Rails. We've defined a set of gems to be used in all projects 
-to ensure a minimum of safety and maintainability :
+Here at [Codelitt](codelitt.com) we have a lot of project built with Ruby/Rails, take a look [here](https://www.quora.com/Why-do-so-many-startups-use-Ruby-on-Rails) if you want to know why. As we work mostly with startups projects we've decided to define a set of gems that should be in every project in order to help us to maintain our best practices.
 
 #### Code quality
 
