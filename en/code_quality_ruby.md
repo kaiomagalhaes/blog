@@ -1,6 +1,6 @@
 A major trend in the startups is the creation of projects in a astronomical speed so that they can be placed in the market to be validated . This being done their destination is defined between a range of options that can be generalized in:**It Needs maintenance or not**. A problem in this approach is the quality of the project in general, mostly on  code  quality and security.
 
-Once the founder of [LinkedIn)](www.linkedin.com) Reid Hoffman said:
+Once the founder of [LinkedIn](www.linkedin.com) Reid Hoffman said:
 
 *If you are not embarrassed by the first version of your product, you’ve launched too late.*
 
