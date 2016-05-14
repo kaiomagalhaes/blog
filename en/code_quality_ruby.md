@@ -1,4 +1,8 @@
-A major trend in the startups is the creation of projects in a astronomical speed so that they can be placed in the market to be validated . This being done their destination is defined between a range of options that can be generalized in:**It Needs maintenance or not**. A problem in this approach is the quality of the project in general, mostly on  code  quality and security.
+A major trend in the startups is the creation of projects in a astronomical speed so that they can be placed in the market to be validated . This being done their destination is defined between a range of options that can be generalized in:
+
+**It Needs maintenance or not**. 
+
+A problem in this approach is the quality of the project in general, mostly on  code  quality and security.
 
 Once the founder of [LinkedIn](www.linkedin.com) [Reid Hoffman](https://www.linkedin.com/in/reidhoffman) said:
 
@@ -12,38 +16,28 @@ Here at [Codelitt](codelitt.com) we have a lot of project built with Ruby/Rails,
 
 As quality is something too abstract we've decided to focus in three main points:
 
-  *. Readability
-  *. Organization
-  *. Maintenability
+  1. Readability
+  2. Organization
+  3. Maintenability
 
-Our code mus be **readable** in a way that the the developer don't waste too much time
-to understand what it does.
+Our code mus be **readable** in a way that the the developer don't waste too much time to understand what it does.
 
-Our code must be well **organized** in packages/modules/classes between other things we care about
+Our code must be well **organized** in packages/modules/classes. We strive to follow the rules of the [Rais Style Guide](http://guides.rubyonrails.org/index.html).
 
-  *. Class names
-  *. Method names
-  *. Class groups
-  *. Others
-
-Our code must be **maintenable**, although we work with startaps we do care about the future of each one
-so if in the future our client decide to improve his product a lot of money and a lot of his time  ( and our time)
-will be saved.
+Our code must be **maintenable**, although we work with startaps we do care about the future of each one so if in the future our client decide to improve his product a lot of money and a lot of his time  (and our time) will be saved.
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
 RuboCop is a Ruby static code analyzer, it searches for smells and bad practces defined by the community.
 Examples of smells are: 
 
-  *. Method too complex
-  *. Line number of a class
-  *. Characters number in a line
-  *. And so on
+  1. Method too complex
+  2. Line number of a class
+  3. Characters number in a line
 
-The official good practces sources are  [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) end
-[Rails style guide](https://github.com/bbatsov/rails-style-guide)
+The official good practices sources are  [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) end [Rails style guide](https://github.com/bbatsov/rails-style-guide)
 
-It not only have a huge range of good practces plus it allows us to customize them, like in the example below:
+It has a huge range of good practices plus allows us to customize them, like in the example below:
 
 ```
 Rails:
@@ -59,10 +53,9 @@ Style/BlockDelimiters:
   Enabled: false
 ```
 
-Besides of showing the code smells it offers a great auto fix that when used with rails 
-it does really good updates in the code like turning:
+Besides of showing the code smells it offers a great auto fix system that when used with rails  it does really good updates in the code, like turning:
 
-``` ruby
+```ruby
 def my_attribute
   my_attribute
 end
