@@ -70,26 +70,19 @@ into
 As soon as I found it I applyed it in a huge project that was already in production. It went from 1400 warnings to 2014, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex where some of them even I had some problems to fix.
  
 Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use
-[Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec good practices.
+[Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec specific good practices.
 
-Here at [Codelitt](codelitt.com) we use it to garantee good practices in our code,  as sometimes even developers with
-years of experience do small mistakes like the wrong use of idention, commas,  variables declared but not used and so on.
-We have a politic of 0 warnings in our CI. Before the build we run rubocop and in case of a warning being raised the build fails.
+Here at [Codelitt](codelitt.com) we use it to garantee good practices in our code,  as sometimes even developers with years of experience do small mistakes like the wrong use of idention, commas,  variables declared but not used and so it goes.
+We have a politic of 0 warnings in our CI, before the build we run rubocop and in case of a warning being raised the build fails.
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
-O Rubycritic é outra ferramenta de análise estática de código. Sendo
-feita a partir da junção de outras três gemas
- ([Reek](https://github.com/troessner/reek),
- [Flay](https://github.com/seattlerb/flay) e
- [Flog](https://github.com/seattlerb/flog)), ela nos
-fornece uma visão geral do projeto e uma visão por classes.
+Rubycritic is another static code analyzer, it is done wraps around the static analysis gems: ([Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog)).
+It offers a project and a class overview.
 
-O ponto alto dessa gema são as análises de codigo duplicado e
-complexidade, como pode ser visto na imagem do relatório abaixo:
+The mainly use this gem because it offers a overview of the duplicated code and complexity, as you can see in the report below:
 
-![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8
-"Ruby Critics image example")
+![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8 "Ruby Critic report example")
 
 Aqui [Codelitt](codelitt.com) nos preocupamos bastante com o principio
 [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) e
