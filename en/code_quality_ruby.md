@@ -77,7 +77,7 @@ We have a politic of 0 warnings in our CI, before the build we run rubocop and i
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
-Rubycritic is another static code analyzer, it is done wraps around the static analysis gems: ([Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog)).
+Rubycritic is another static code analyzer, it is done wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog).
 It offers a project and a class overview.
 
 The mainly use this gem because it offers a overview of the duplicated code and complexity, as you can see in the report below:
