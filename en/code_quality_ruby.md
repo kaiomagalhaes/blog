@@ -31,9 +31,9 @@ Our code must be **maintenable**, although we work with startaps we do care abou
 RuboCop is a Ruby static code analyzer, it searches for smells and bad practces defined by the community.
 Examples of smells are: 
 
-  1. Method too complex
-  2. Line number of a class
-  3. Characters number in a line
+  * Method too complex
+  * Line number of a class
+  * Characters number in a line
 
 The official good practices sources are  [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) end [Rails style guide](https://github.com/bbatsov/rails-style-guide)
 
@@ -67,9 +67,7 @@ into
   attr_accessor :my_attribute
 ```
 
-As soon as I found it i applyed it in a already in production project that I had, it pointed
-1400 warnings, after using the autofix the number dropped to 214,  so only a small piece of  it
-wasn't automatically fixed and needed the hand of a developer.
+As soon as I found it I applyed it in a huge project that was already in production. It went from 1400 warnings to 2014, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex where some of them even I had some problems to fix.
  
 Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use
 [Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec good practices.
