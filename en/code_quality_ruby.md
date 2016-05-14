@@ -1,60 +1,60 @@
-Uma grande tendência das startups é a criação de projetos em uma
-velocidade astronômica para que os mesmos possam ser colocados no
-mercado de forma serem validados. Isso sendo feito o destino dos mesmos
-é definido entre uma gama de opções: descontinuado, continuado mas não
-precisa de novas funcionalidades, precisa de manutenção e etc.
+A major trend in the startups is the creation of projects in a
+astronomical speed so that they can be placed in
+the market to be validated . This being done their destination
+is defined between a range of options : discontinued, continued but don't
+need new features, needs maintenance and so on.
 
-Um problema nesse inicio de projeto é a qualidade do mesmo. Certa vez o
-fundador do Linkedin Reid Hoffman disse:
+A problem in this project beginning is the quality. Once the
+founder of LinkedIn Reid Hoffman said :
 
-*Se você não tem vergonha da primeira versão do seu produto, você
-demorou demais para lançar.*
+* If you are not embarrassed by the first version of your product, you’ve launched too late. *
 
-Por mais que se aplique ao que o consumidor irá encontrar isso
-não deve ser aplicado ao código, grandes customizações podem não ser
-necessárias, porém existem pequenas práticas que podem garantir uma boa
-manutenção no futuro além, de  economia de tempo ( nosso mais caro recurso ) e
-dinheiro.
+As it applies to what the consumer will find it
+should not be applied to the code. Large customizations can not be
+necessary, but there are small practices that can ensure good
+maintenance as well as saving time ( our most expensive resource ) and
+money.
 
-Aqui na [Codelitt](codelitt.com) a maior parte dos nossos projetos são
-feitos com Ruby/Rails, sendo assim definimos a utilização de um conjunto
- de gemas a serem utilizadas em todos os projetos para garantir um mínimo de
-segurança e manutenibilidade:
+Here at [Codelitt](codelitt.com) most of our projects are built with 
+Ruby/Rails. We've defined a set of gems to be used in all projects 
+to ensure a minimum of safety and maintainability :
 
-#### Qualidade de código
+#### Code quality
 
-Sobre qualidade de código nós focamos em três pontos chave: Leitura,
-organização e manutenção.
+As quality is something too abstract we've decided to focus in three main points:
 
-Nosso código tem que ser **legível** de forma que o desenvolvedor não gaste
-muito tempo para entender o que está sendo feito.
+  *. Readability
+  *. Organization
+  *. Maintenability
 
-Nosso código tem que ser **organizado** de forma fazer sentido
- arquiteturalmente, ex:
+Our code mus be **readable** in a way that the the developer don't waste too much time
+to understand what it does.
 
-  1. Nomeclatura das classes
-  2. Nomeclatura dos métodos
-  3. Classes com objetivo semelhantes agrupadas em módulos
-  4. Entre outros
+Our code must be well **organized** in packages/modules/classes between other things we care about
 
-Nosso código tem que ser **manutenível**. Por mais que trabalhemos com
-startups nós nos preocupamos com a continuidade dos projetos de forma
-que seja possivel economizar tempo caso alterações sejam necessárias no
-futuro.
+  *. Class names
+  *. Method names
+  *. Class groups
+  *. Others
+
+Our code must be **maintenable**, although we work with startaps we do care about the future of each one
+so if in the future our client decide to improve his product a lot of money and a lot of his time  ( and our time)
+will be saved.
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
-O Rubocop faz uma análise estática no código buscando por 'ofensas' 
-(onde cada uma gera uma warning) á boas práticas definidas pela comunidade,
-tais como: Complexidade excessiva em um método, numero de linhas de uma 
-classe, numero de caracteres em uma linha e etc.
+RuboCop is a Ruby static code analyzer, it searches for smells and bad practces defined by the community.
+Examples of smells are: 
 
-As fontes oficiais de boas práticas são: [Ruby style
-guide](https://github.com/bbatsov/ruby-style-guide) e [Rails style
-guide](https://github.com/bbatsov/rails-style-guide)
+  *. Method too complex
+  *. Line number of a class
+  *. Characters number in a line
+  *. And so on
 
-Ele não só possui uma gama imensa de boas práticas pré definidas como
-também nos permite a customização das mesmas, como por exemplo: 
+The official good practces sources are  [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) end
+[Rails style guide](https://github.com/bbatsov/rails-style-guide)
+
+It not only have a huge range of good practces plus it allows us to customize them, like in the example below:
 
 ```
 Rails:
@@ -70,25 +70,31 @@ Style/BlockDelimiters:
   Enabled: false
 ```
 
-Além de nos mostrar os problemas do código ele nos fornece um ótimo
-sistema de autocorreção que quando utilizado com rails faz belas
-alterações no projeto, sempre pensando em boas práticas. Assim que
-descobri essa gema decidi aplica-la em um projeto em desenvolvimento,
-inicialmente ele apontou 1400 warnings, após a utilização da
-autocorreção  esse número pulou para 214, ou seja, do valor inicial
-somente uma pequena parcela não foi corrigida automaticamente.
+Besides of showing the code smells it offers a great auto fix that when used with rails 
+it does really good updates in the code like turning:
 
-Juntamente [Rubocop](https://github.com/bbatsov/rubocop) utilizamos o
-[Rubocop Rspec](https://github.com/nevir/rubocop-rspec) sempre que
-utilizamos o [RSpec](https://github.com/rspec/rspec) pois ele possui
-um foco maior nos testes.
+``` ruby
+def my_attribute
+  my_attribute
+end
+```
 
-Na [Codelitt](codelitt.com) nós o utilizamos para garantir a aplicação
-das boas práticas, por mais que tenhamos bons desenvolvedores muitas
-vezes não percebemos pequenos detalhes como espaçamento, tamanho de linha,
-a não utilização de uma variavel e etc. Temos uma política de 0 warnings
-no nosso CI. Antes de fazer a build o rubocop é ativado, e caso alguma ofensa
-seja encontrada a mesma falha imediatamente.
+into 
+
+``` ruby
+  attr_accessor :my_attribute
+```
+
+As soon as I found it i applyed it in a already in production project that I had, it pointed
+1400 warnings, after using the autofix the number dropped to 214,  so only a small piece of  it
+wasn't automatically fixed and needed the hand of a developer.
+ 
+Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use
+[Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec good practices.
+
+Here at [Codelitt](codelitt.com) we use it to garantee good practices in our code,  as sometimes even developers with
+years of experience do small mistakes like the wrong use of idention, commas,  variables declared but not used and so on.
+We have a politic of 0 warnings in our CI. Before the build we run rubocop and in case of a warning being raised the build fails.
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
