@@ -4,11 +4,7 @@ Once the founder of [LinkedIn](www.linkedin.com) [Reid Hoffman](https://www.link
 
 *If you are not embarrassed by the first version of your product, you’ve launched too late.*
 
-As it applies to what the consumer will find it
-should not be applied to the code. Large customizations can not be
-necessary, but there are small practices that can ensure good
-maintenance as well as saving time ( our most expensive resource ) and
-money.
+As it applies to what the consumer will find, it should not be applied to the code. It is clear that we should not take care about of large customizations, but there are small practices that *can* ensure a good maintenance as well as saving time (our most expensive resource) and money.
 
 Here at [Codelitt](codelitt.com) most of our projects are built with 
 Ruby/Rails. We've defined a set of gems to be used in all projects 
