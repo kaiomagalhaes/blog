@@ -1,16 +1,16 @@
 A major trend in the startups is the creation of projects in a astronomical speed so that they can be placed in the market to be validated . This being done their destination is defined between a range of options that can be generalized in:
 
-**It Needs maintenance or not**. 
+**It needs maintenance or not.**
 
-A problem in this approach is the quality of the project in general, mostly on  code  quality and security.
+A problem in this approach is the quality of the project in general, mostly on code quality and security.
 
 Once the founder of [LinkedIn](www.linkedin.com) [Reid Hoffman](https://www.linkedin.com/in/reidhoffman) said:
 
 *If you are not embarrassed by the first version of your product, you’ve launched too late.*
 
-As it applies to what the consumer will find, it should not be applied to the code. It is clear that we should not take care about of large customizations, but there are small practices that *can* ensure a good maintenance as well as saving time (our most expensive resource) and money.
+As it applies to what the consumer will find, it should not be applied to the code. It is clear that we should not take care of large customizations, but there are small practices that *can* ensure a good maintenance as well as saving time (our most expensive resource) and money.
 
-Here at [Codelitt](codelitt.com) we have a lot of project built with Ruby/Rails, take a look [here](https://www.quora.com/Why-do-so-many-startups-use-Ruby-on-Rails) if you want to know why. As we work mostly with startups projects we've decided to define a set of gems that should be in every project in order to help us to maintain our best practices.
+Here at [Codelitt](codelitt.com) we have a lot of projects built with Ruby/Rails, take a look [here](https://www.quora.com/Why-do-so-many-startups-use-Ruby-on-Rails) if you want to know why. As we work mostly with startups projects we've decided to define a set of gems that should be in every project in order to help us to maintain our best practices.
 
 #### Code quality
 
@@ -61,7 +61,7 @@ def my_attribute
 end
 ```
 
-into 
+into
 
 ``` ruby
   attr_accessor :my_attribute
@@ -69,18 +69,16 @@ into
 
 As soon as I found it I applyed it in a huge project that was already in production. It went from 1400 warnings to 214, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex where some of them even I had some problems to fix.
  
-Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use
-[Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec specific good practices.
+Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use [Rubocop Rspec](https://github.com/nevir/rubocop-rspec)  because it has  a lot of RSpec specific good practices.
 
 Here at [Codelitt](codelitt.com) we use it to garantee good practices in our code,  as sometimes even developers with years of experience do small mistakes like the wrong use of idention, commas,  variables declared but not used and so it goes.
 We have a politic of 0 warnings in our CI, before the build we run rubocop and in case of a warning being raised the build fails.
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
-Rubycritic is another static code analyzer, it is done wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog).
-It offers a project and a class overview.
+Rubycritic is another static code analyzer, it is done wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog). It offers a project and a class overview.
 
-The mainly use this gem because it offers a overview of the duplicated code and complexity, as you can see in the report below:
+We mainly use this gem because it offers an overview of the duplicated code and complexity, as you can see in the report below:
 
 ![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8 "Ruby Critic report example")
 
@@ -94,7 +92,7 @@ Besides the server good practices and a special care to sensitive data we obviou
 
 ###### [Brakeman](https://github.com/presidentbeef/brakeman)
 
-Brakeman is gem that checks Ruby on Rails applications for security vulnerabilities, it raises warnings for each one that is found.
+Brakeman a is gem that checks Ruby on Rails applications for security vulnerabilities, it raises warnings for each one that is found.
 
 Here at [Codelitt](codelitt.com) our politic is 0 warnings. As it is the first step the our build proccess if it finds any security gap it fails and don't build the project.
 
@@ -122,6 +120,6 @@ Here at [Codelitt](codelitt.com) we define that the minimum code coverage should
 
 #### Conclusion
 
-It is a resume of our principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find a new gems or good practices. In case you know a better solution or some recommendation please let me know in the comments or by email I would really appreciate it, mine is me@kaiomagalhaes.com
-.
+It is a resume of our principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find a new gems or good practices. In case you know a better solution or some recommendation please let me know in the comments or by email I would really appreciate it, mine is kaio@codelitt.com.
+
 If you want to know more about our practices take a look in our [repository](https://github.com/codelittinc/incubator-resources) it has a lot of cool stuff.
