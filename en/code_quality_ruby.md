@@ -28,7 +28,7 @@ Our code must be **maintenable**, although we work with startaps we do care abou
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
-RuboCop is a Ruby static code analyzer, it searches for smells and bad practces defined by the community.
+RuboCop is a Ruby static code analyzer, it searches for smells and bad practices defined by the community.
 Examples of smells are: 
 
   * Method too complex
