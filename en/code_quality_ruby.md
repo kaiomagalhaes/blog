@@ -112,7 +112,7 @@ Here at [Codelitt](codelitt.com) the verification with [Bundler-audit](https://g
 
 #### Code coverage
 
-Code coverage is important because with this data we can ensure that our application is being minimally tested. As it doesn’t guarantee that the critical points of the application are being tested (which needs to be our main focus) we can’t base on it to make sure that our application is safe, but only that something that was working will keep working after some change in the code.
+Code coverage is important because with this data we can ensure that our application is being minimally tested. As code lines covereded don't guarantee that the critical points of the application are being tested (which needs to be our main focus) we can’t base on it to make sure that our application is safe, but only that something that was working will keep working after some change in the code.
 
 ##### [Simplecov](https://github.com/colszowka/simplecov)
 
