@@ -120,6 +120,6 @@ Here at [Codelitt](codelitt.com) we define that the minimum code coverage should
 
 #### Conclusion
 
-It is a resume of our principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find a new gems or good practices. In case you know a better solution or some recommendation please let me know in the comments or by email I would really appreciate it, mine is kaio@codelitt.com.
+It is a resume of our principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find new gems or good practices. In case you know a better solution or some recommendation please let me know in the comments or by email I would really appreciate it, mine is kaio@codelitt.com.
 
 If you want to know more about our practices take a look in our [repository](https://github.com/codelittinc/incubator-resources) it has a lot of cool stuff.
