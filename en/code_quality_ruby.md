@@ -6,7 +6,9 @@ A problem in this approach is the quality of the project in general, mostly on c
 
 Once the founder of [LinkedIn](www.linkedin.com) [Reid Hoffman](https://www.linkedin.com/in/reidhoffman) said:
 
-*If you are not embarrassed by the first version of your product, you’ve launched too late.*[(about)](http://www.businessinsider.com/the-iterate-fast-and-release-often-philosophy-of-entrepreneurship-2009-11)
+*If you are not embarrassed by the first version of your product, you’ve launched too late.*
+
+More about This philosophy [here](http://www.businessinsider.com/the-iterate-fast-and-release-often-philosophy-of-entrepreneurship-2009-11)
 
 As it applies to what the consumer will find, it should not be applied to the code. It is clear that we should not take care of large customizations, but there are small practices that *can* ensure a good maintenance as well as saving time (our most expensive resource) and money.
 
