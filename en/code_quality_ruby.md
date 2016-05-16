@@ -8,7 +8,7 @@ Once the founder of [LinkedIn](www.linkedin.com) [Reid Hoffman](https://www.link
 
 *If you are not embarrassed by the first version of your product, you’ve launched too late.*
 
-More about This philosophy [here](http://www.businessinsider.com/the-iterate-fast-and-release-often-philosophy-of-entrepreneurship-2009-11)
+More about this philosophy [here](http://www.businessinsider.com/the-iterate-fast-and-release-often-philosophy-of-entrepreneurship-2009-11)
 
 As it applies to what the consumer will find, it should not be applied to the code. It is clear that we should not take care of large customizations, but there are small practices that *can* ensure a good maintenance as well as saving time (our most expensive resource) and money.
 
