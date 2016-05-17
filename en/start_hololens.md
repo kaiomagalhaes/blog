@@ -1,1 +1,1 @@
-## How to start an hololens project
+## How to start a hololens project
