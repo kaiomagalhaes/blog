@@ -18,9 +18,9 @@ Here at [Codelitt](codelitt.com) we have a lot of projects built with Ruby/Rails
 
 As quality is something too abstract we’ve decided to focus in three main points:
 
-1. Readability
- 2. Organization
- 3. Maintainability
+ 1. Readability
+ 2. Organization
+ 3. Maintainability
 
 Our code must be **readable** in a way that the the developer doesn’t waste too much time to understand what it does.
 
@@ -33,9 +33,9 @@ Our code must be **maintainable**. Although we work with startups, we do care ab
 RuboCop is a Ruby static code analyzer, it searches for smells and bad practices defined by the community.
 Examples of smells are:
 
-.* Method too complex
- * Line number of a class
- * Characters number in a line
+ 1. Readability
+ 2. Organization
+ 3. Maintainability
 
 The official good practices sources are [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) and [Rails style guide](https://github.com/bbatsov/rails-style-guide)
 
