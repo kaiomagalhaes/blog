@@ -26,20 +26,20 @@ Our code must be **readable** in a way that the the developer doesn’t waste to
 
 Our code must be well **organized** in packages/modules/classes. We strive to follow the rules of the [Rails Style Guide](http://guides.rubyonrails.org/index.html).
 
-Our code must be **maintainable**, although we work with startups we do care about the future of each one so if in the future our client decide to improve his product a lot of money and a lot of his time (and our time) will be saved.
+Our code must be **maintainable**. Although we work with startups, we do care about the future of each one, so if in the future our client decides to improve his product, a lot of money and a lot of his time (and our time) will be saved.
 
 ##### [Rubocop](https://github.com/bbatsov/rubocop)
 
 RuboCop is a Ruby static code analyzer, it searches for smells and bad practices defined by the community.
 Examples of smells are:
 
-* Method too complex
+.* Method too complex
  * Line number of a class
  * Characters number in a line
 
-The official good practices sources are [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) end [Rails style guide](https://github.com/bbatsov/rails-style-guide)
+The official good practices sources are [Ruby style guide](https://github.com/bbatsov/ruby-style-guide) and [Rails style guide](https://github.com/bbatsov/rails-style-guide)
 
-It has a huge range of good practices plus allows us to customize them, like in the example below:
+It has a huge range of good practices and allows us to customize them, like in the example below:
 
 ```
 Rails:
@@ -55,7 +55,7 @@ Style/BlockDelimiters:
  Enabled: false
 ```
 
-Besides of showing the code smells it offers a great auto fix system that when used with rails it does really good updates in the code, like turning:
+Besides showing the code smells, it offers a great auto fix system that when used with rails it does a really good update in the code, like turning:
 
 ```ruby
 def my_attribute
@@ -69,59 +69,57 @@ into
  attr_accessor :my_attribute
 ```
 
-As soon as I found it I applied it in a huge project that was already in production. It went from 1400 warnings to 214, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex where some of them even I had some problems to fix.
- 
-Along side with [Rubocop](https://github.com/bbatsov/rubocop) we use [Rubocop Rspec](https://github.com/nevir/rubocop-rspec) because it has a lot of RSpec specific good practices.
+As soon as I found it I applied it in a huge project that was already in production. It went from 1400 warnings to 214, so as you may see it fixed more than 80% of the code smells, mostly of the non fixed ones were too complex, some of them even I had some problems to fix.
 
-Here at [Codelitt](codelitt.com) we use it to guarantee good practices in our code, as sometimes even developers with years of experience do small mistakes like the wrong use of indention, commas, variables declared but not used and so it goes.
-We have a politic of 0 warnings in our CI, before the build we run rubocop and in case of a warning being raised the build fails.
+Alongside with [Rubocop](https://github.com/bbatsov/rubocop) we use [Rubocop Rspec](https://github.com/nevir/rubocop-rspec) because it has a lot of RSpec specific good practices.
+
+Here at [Codelitt](codelitt.com) we use it to guarantee good practices in our code, as sometimes even developers with years of experience make small mistakes like the wrong use of indention, commas, variables declared but not used and so it goes.
+We have a policy of 0 warnings in our CI, before the build we run rubocop and in case of a warning being raised the build fails.
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
-Rubycritic is another static code analyzer, it is done wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog). It offers a project and a class overview.
-
-We mainly use this gem because it offers an overview of the duplicated code and complexity, as you can see in the report below:
+Rubycritic is another static code analyzer, it wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog).We use mainly this gem because it offers an overview of the duplicated code and complexity, as you can see in the report below:
 
 ![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8 “Ruby Critic report example”)
 
-Here at [Codelitt](codelitt.com) we care a lot with the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle and the report that this gem offers is really helpful.
+Here at [Codelitt](codelitt.com) we care a lot about the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle and the report that this gem offers is really helpful.
 
 #### Security
 
-As we work with projects that goes from simple sites to money transfer systems, so as a pattern we do care about security in all of them.
+As we work with projects that go from simple sites to money transfer systems, by default we do care about security in all of them.
 
-Besides the server good practices and a special care to sensitive data we obviously can’t allows to ignore the harm that may be done in our application by attacks with: DDOS, SQL Injection and so on. To ensure that our application are minimally secured we use the following gems:
+Besides the server good practices and a special care to sensitive data we obviously can’t allow to ignore the harm that may be done in our applications by attacks with: DDOS, SQL Injection and so on. To ensure that our applications are minimally secure we use the following gems:
 
 ###### [Brakeman](https://github.com/presidentbeef/brakeman)
 
-Brakeman a is gem that checks Ruby on Rails applications for security vulnerabilities, it raises warnings for each one that is found.
+Brakeman is a gem that checks Ruby on Rails applications for security vulnerabilities, it raises warnings for each one that is found.
 
-Here at [Codelitt](codelitt.com) our politic is 0 warnings. As it is the first step the our build process if it finds any security gap it fails and don’t build the project.
+Here at [Codelitt](codelitt.com) our policy is 0 security warnings. As it is the first step in our build process, if it finds any security gap it fails and don’t build the project.
 
 ###### [Dawnscanner](https://github.com/thesp0nge/dawnscanner)
 
-Dawnscanner is a source code scanner designed to review ruby code for security issues. We use it along side with [Brakeman](https://github.com/presidentbeef/brakeman) to ensure a redundancy in our security verification. It runs after [Brakeman](https://github.com/presidentbeef/brakeman) and fails if it finds any gaps as well.
+Dawnscanner is a source code scanner designed to review ruby code for security issues. We use it alongside with [Brakeman](https://github.com/presidentbeef/brakeman) to ensure a redundancy in our security verification. It runs after [Brakeman](https://github.com/presidentbeef/brakeman) and fails if it finds any gap as well.
 
 ###### [Bundler-audit](https://github.com/rubysec/bundler-audit)
 
-Bundler Audit checks the Gemfile.lock and searches for security gaps reported in each gem used in the project. If it finds any problem in the version of a gem it searches for one that is secure and asks us to update it. If a secure one doesn’t exists, well, it is time to search for another.
+Bundler Audit checks the Gemfile.lock and searches for security gaps reported in each gem used in the project. If it finds any problem in the version of a gem, it searches for one that is secure and asks us to update it. If a secure one doesn’t exist, well, it is time to search for another.
 
-While we focus on the general security of our application it is common to forget that the product is a combination of gems and code that we write, so if any gem used in the project has a security gap them it is the enemy inside that we have.
+While we focus on the general security of our applications it is common to forget that the product is a combination of gems and code that we write, so if any gem used in the project has a security gap then it is the enemy inside that we have.
 
-Here at [Codelitt](codelitt.com) the verification with [Bundler-audit](https://github.com/rubysec/bundler-audit) is the thirty step before the build. When it finds a compromised gem we search for a safe version, in the case of we don’t find one we just throw it away and search for another way to resolve the problem.
+Here at [Codelitt](codelitt.com) the verification with [Bundler-audit](https://github.com/rubysec/bundler-audit) is the third step before the build. When it finds a compromised gem we search for a safe version, in the case of not finding one, we just throw it away and search for another way to solve the problem.
 
 #### Code coverage
 
-Code coverage is important because with this data we can ensure that our application is being minimally tested. As code lines covereded don't guarantee that the critical points of the application are being tested (which needs to be our main focus) we can’t base on it to make sure that our application is safe, but only that something that was working will keep working after some change in the code.
+Code coverage is important because with this data we can ensure that our application is being minimally tested. As code lines covereded don't guarantee that the critical points of the application are being tested (which needs to be our main focus) we can’t use it as basis to make sure that our applications are safe, but only that something that was working will keep working after some change in the code.
 
 ##### [Simplecov](https://github.com/colszowka/simplecov)
 
-SimpleCov is a code coverage analysis tool for Ruby. Besides the offer of good test reports it allows us to configure our tests to fail if a coverage percentage is not hit.
+SimpleCov is a code coverage analysis tool for Ruby. Besides the offer of good test reports it allows us to configure our tests to fail if a coverage percentage is not met.
 
 Here at [Codelitt](codelitt.com) we define that the minimum code coverage should be at least 90%.
 
 #### Conclusion
 
-It is a resume of our principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find new gems or good practices. In case you know a better solution or some recommendation please let me know in the comments or by email I would really appreciate it, mine is kaio@codelitt.com.
+It is a summary of the principles and gems that we use in our Ruby/Rails projects here at [Codelitt](codelitt.com). It will be updated every time that we find new gems or good practices. If you know a better solution or have some recommendation please let me know in the comments or by email. I would really appreciate it, mine is kaio@codelitt.com.
 
-If you want to know more about our practices take a look in our [repository](https://github.com/codelittinc/incubator-resources) it has a lot of cool stuff.
+If you want to know more about our practices, take a look in our [repository](https://github.com/codelittinc/incubator-resources) it has a lot of cool stuff.
