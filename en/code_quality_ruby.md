@@ -80,7 +80,7 @@ We have a policy of 0 warnings in our CI, before the build we run rubocop and in
 
 Rubycritic is another static code analyzer, it wraps around the static analysis gems [Reek](https://github.com/troessner/reek), [Flay](https://github.com/seattlerb/flay) and [Flog](https://github.com/seattlerb/flog).We use mainly this gem because it offers an overview of the duplicated code and complexity, as you can see in the report below:
 
-![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8 “Ruby Critic report example”)
+![alt text](http://www.clipular.com/c/5227312822353920.png?k=xKPmaAjaIBnIg-ZwOJoLbZVlQZ8 'Ruby Critic report example')
 
 Here at [Codelitt](codelitt.com) we care a lot about the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle and the report that this gem offers is really helpful.
 
