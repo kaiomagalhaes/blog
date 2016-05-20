@@ -14,7 +14,7 @@ More about this philosophy [here](http://www.businessinsider.com/the-iterate-fas
 
 Sometimes, this quote is taken a little too literally. If you're delivering on your promise then it's okay to be embarrassed about the current state of your product, but you don't necessarily have to be as embarrassed by your code quality. It is obvious that corners will be cut and tech debt will accrue for the sake of speed to market, but there are small practices that *can* ensure maintainability, elegance, and actually save time (our most expensive resource) and money so you can focus on new features. 
 
-Here at [Codelitt Incubator](codelitt.com) we have a lot of projects built with Ruby/Rails somewhere in the stack. This sums up our reasoning [here](https://www.quora.com/Why-do-so-many-startups-use-Ruby-on-Rails). Whether its our R&D work with large companies to our startup work, we're constantly woring on early stage products. Because of this, we've defined a set of gems that should be in every project in order to help us to maintain our best practices, eliminate headaches later on, and still move fast. 
+Here at [Codelitt Incubator](codelitt.com) we have a lot of projects built with Ruby/Rails somewhere in the stack. This sums up our reasoning [here](https://www.quora.com/Why-do-so-many-startups-use-Ruby-on-Rails). Whether its our R&D work with large companies to our startup work, we're constantly working on early stage products. Because of this, we've defined a set of gems that should be in every project in order to help us to maintain our best practices, eliminate headaches later on, and still move fast. 
 
 #### Code quality
 
@@ -35,9 +35,9 @@ Our code must be **maintainable**. Although we work with early stage products, w
 RuboCop is a Ruby static code analyzer, it searches for code smell and bad practices as defined by the community.
 Examples of smells are:
 
- 1. TODO: @Kaio Add examples
- 2. 
- 3.
+ 1. Method too complex
+ 2. Line too long
+ 3. Wrong spacing between lines or variables
 
 The gem has a huge range of best practices and allows us to customize them, like in the example below:
 
@@ -73,7 +73,7 @@ I started using it with huge, legacy project that was already in production. It'
 
 Alongside with [Rubocop](https://github.com/bbatsov/rubocop) we use [Rubocop Rspec](https://github.com/nevir/rubocop-rspec) because it has a lot of RSpec specific best practices.
 
-These act as a watchdog for us. Even engineers with years of experience make small mistakes like the wrong use of indentation, commas, variables declared but not used, etc... We have a policy of 0 warnings in our CI, so before the build rubocopruns and if a warning is raised the build fails. We always know what to expect when jumping into another teammates projects and a lot of the younger guys have learned a lot from it. 
+These act as a watchdog for us. Even engineers with years of experience make small mistakes like the wrong use of indentation, commas, variables declared but not used, etc... We have a policy of 0 warnings in our CI, so before the build rubocop runs and if a warning is raised the build fails. We always know what to expect when jumping into another teammates projects and a lot of the younger guys have learned a lot from it. 
 
 ##### [Rubycritic](https://github.com/whitesmith/rubycritic)
 
