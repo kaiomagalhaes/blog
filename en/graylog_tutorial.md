@@ -72,7 +72,7 @@ If you run `docker ps -a` you will see that the graylog container is not running
 
 `docker inspect graylog` 
 
-You will see something like: `'IPAddress': '172.18.0.4'` take the ip and set it up and replace the `127.0.0.1` from the `     GRAYLOG_REST_TRANSPORT_URI: http://127.0.0.1:12900`.
+You will see something like: `'IPAddress': '172.18.0.4'` take the ip and replace the `127.0.0.1` from the `     GRAYLOG_REST_TRANSPORT_URI: http://127.0.0.1:12900` with it.
 
 Run `docker-compose up -d` again
 
@@ -138,7 +138,7 @@ Take the content of the nginx `default.conf` [here](https://github.com/kaiomagal
 
 Now you should be able to access it with: https://yourserver.com:9000
 
-The default user is 
+The default user is
 ```
 user: admin
 password: admin
@@ -157,7 +157,7 @@ The [12Factor](http://12factor.net/logs) says:
 
 "A twelve-factor app never concerns itself with routing or storage of its output stream."
 
-In to acomplish it we should use the first option, which is very easy with docker-compose. You just need to add the following piece inside the service that you want to log in your docker-compose.yml file.
+In order to acomplish it we should use the first option, which is very easy with docker-compose. You just need to add the following piece inside the service that you want to log in your docker-compose.yml file.
 
 ```
     logging:
@@ -177,6 +177,5 @@ As Graylog doesn't offer an application_key you need to update your iptables to 
 Ba-du-tss!
 
 You have a secure server application running!
-
 
 If you want to know more about our best practices, take a look in our [repository](https://github.com/codelittinc/incubator-resources). We open source all of our policies and best practices as well as continue to add to them there.
