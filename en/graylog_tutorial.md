@@ -4,9 +4,9 @@ In case you are setting up a new server take a look in our [server security prac
 
 If you don't have the docker-compose installed take a look on this [great tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04) provided by [Digital Ocean](https://www.digitalocean.com/).
 
-And let's go to the Graylogs setup:
+And let's go to the [Graylog](graylog.org) setup:
 
-1 - Setup the graylogs config folder
+1 - Setup the graylog config folder
 ```
 mkdir -p graylog/config
 cd graylog/config
