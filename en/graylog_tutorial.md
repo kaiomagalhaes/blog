@@ -1,4 +1,4 @@
-Here at [Codelitt](http://www.codelitt.com/) we use the best self-hosted tool to centralize logs that we've found, which is  [Graylog](graylog.org). It has a rich web client with a lot of filters and graphics. They offer a good documentation to set it up, however as we strive to have [12Factor](12factor.net) compliant services and applications we've organized a HOW-TO with it and docker with docker-compose.
+Here at [Codelitt](http://www.codelitt.com/) we use the best self-hosted tool to centralize logs that we've found, which is  [Graylog](graylog.org). It has a rich web client with a lot of filters and graphics. They offer a good documentation to set it up, however as we strive to have [12Factor](12factor.net) compliant applications we've organized a HOW-TO with it and docker with docker-compose.
 
 In case you are setting up a new server take a look in our [server security practices](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md) and remember to *not* set it up with the root admin.
 
