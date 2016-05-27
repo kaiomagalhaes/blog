@@ -1,4 +1,4 @@
-Here at [Codelitt](codelitt.com) we use Nginx as our proxy server. Commonly we install nginx in the server and run the applications with docker and docker-compose. As we strive to have a configuration that isn't server based now we are using it with docker and docker-compose.
+Here at [Codelitt](codelitt.com) we use Nginx as our proxy server. Commonly we install nginx in the server and run the applications with docker and docker-compose. As we strive to have a configuration that isn't server based now we are using it with the same environment of our applications.
 
 To set it up up you can use the following docker compose:
 
