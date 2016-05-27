@@ -22,7 +22,7 @@ services:
 ```
 
 As you can see the configuration files will be in a host folder, here we use: `/etc/nginx-docker`.
- Inside this folder you need to add the files that you can find [here](https://github.com/kaiomagalhaes/nginx-docker-configuration). Don't forget to set up the `default.conf` that is localized in `/etc/nginx-docker/conf.d/default.conf`
+ Inside this it you need to add the files that you can find [here](https://github.com/kaiomagalhaes/nginx-docker-configuration). Don't forget to set up the `default.conf` that is localized in `/etc/nginx-docker/conf.d/default.conf`
 
 If you want to listen to another ports make sure to add them in the `ports` section of the docker-compose file.
 
