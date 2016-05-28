@@ -1,0 +1,7 @@
+It is always good to put an application in production. The feeling of a well job done, to have our client happy 
+and our client's customers using it. Which developer doesn't love it? Better than it is to have a way to update the
+production application with 0 downtime. It is like to fuel an airplane on the fly.The feeling is awesome but to achieve it 
+is not that simple, you need to worry with database consistency, active sections and the list goes on.
+
+Here at [Codelitt](http://www.codelitt.com/) we have set it up in a simple but really good way to achieve it with 
+[Docker Compose](https://docs.docker.com/compose/) and [Nginx](http://nginx.org/)
