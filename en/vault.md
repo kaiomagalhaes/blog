@@ -1,10 +1,15 @@
 Here at [Codelitt](http://www.codelitt.com/) we are really concerned about security. We've writen about it before [here](http://www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/#security), but there are still a lot of practices and services that we use in our ecosystem. Today I'm going to talk about [Vault](vaultproject.io), the service that we use to handle sensible env variables.
 
-[Vault](vaultproject.io) is an awesome service to store sensitive key/values. Here we use it to store our env variables like service keys, service password and so on. 
+[Vault](vaultproject.io) is an awesome service to store sensitive key/values. We use it to store our env variables like service keys and passwords. 
+
+It offers a really good [documentation](https://www.vaultproject.io/docs/index.html), but if you don't care about the security in your server it doesn't matter if you are going to use a robust application like this one or if you store your sensitive data in plain text. 
+So here you will learn how to have Vault working in a secure server.
 
 Let's learn how to set it up.
 
 In case you are setting up a new server take a look in our [server security practices](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md) and remember to *not* set it up with the root admin.
+
+I strongly recommend you to use the [2factor authentication](https://github.com/kaiomagalhaes/incubator-resources/blob/master/best_practices/servers.md#2-factor-authentication), it may give you some headaches but it is totally worth.
 
 If you don't have the docker-compose installed take a look on this [great tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04) provided by [Digital Ocean](https://www.digitalocean.com/).
 
@@ -24,7 +29,7 @@ backend "consul" {
 }
 ```
 
-2 - As we are using docker the initial setup is very simple, we are going to use a Vault image, you can find the source [here](https://github.com/cgswong/docker-vault). Put the following content in your `docker-compose.yml`
+2 - As we are using docker the initial setup is very simple, we are going to use a Vault image, which you can find the source [here](https://github.com/cgswong/docker-vault). Put the following content in your `docker-compose.yml`
 
 ```
 version: '2'
