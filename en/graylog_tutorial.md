@@ -1,12 +1,12 @@
-Here at [Codelitt](http://www.codelitt.com/) we use the best self-hosted tool to centralize logs that we've found, which is  [Graylog](graylog.org). It has a rich web client with a lot of filters and graphics. They offer a good documentation to set it up, however as we strive to have [12Factor](12factor.net) compliant applications we've organized a HOW-TO with it and docker+docker-compose.
+Here at [Codelitt Incubator](http://www.codelitt.com/) we really prefer to self-host our services when possible, especially for sensitive projects. We have used LogEntries for quite a few projects, but needed a self-hosted option for a few products. We did a ton of research and finally settled on [Graylog](https://www.graylog.org/). So far it has been the best self-hosted tool to centralize logs that we've found. It has a rich web client with a lot of filters and a solid UI. They offer good documentation to set it up, however, because we strive to have [12Factor](12factor.net) compliant applications we've organized a small HOW-TO to setup Graylog with Docker + Docker-Compose.
 
-In case you are setting up a new server take a look in our [server security practices](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md) and remember to *not* set it up with the root admin.
+If you are setting up a new server take a look at our [server security practices](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md). This should provide good foundation. **Remember to *not* set it up with the root user.**
 
-If you don't have the docker-compose installed take a look on this [great tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04) provided by [Digital Ocean](https://www.digitalocean.com/).
+If you don't have docker-compose installed take a look here [great tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04) provided by [Digital Ocean](https://www.digitalocean.com/). They give an overview of Docker Compose, setting it up, and how to use it to orchestrate microservices. You really only need the first 2 steps, but it's a very short read and I recommend taking a look at the others to get a feel for it. 
 
-And let's go to the [Graylog](graylog.org) setup:
+After you've got that setup, let's jump into the [Graylog](https://www.graylog.org/) setup:
 
-1 - Setup the graylog config folder
+###1 - Setup the graylog config folder on your server
 ```
 mkdir -p graylog/config
 cd graylog/config
@@ -16,9 +16,11 @@ wget https://raw.githubusercontent.com/Graylog2/graylog2-images/2.0/docker/confi
 
 To grant read/write permissions run: `sudo chmod -R a+rw graylog/`
 
-2 - In their [docs](http://docs.graylog.org/en/2.0/pages/installation/docker.html) they provide a docker compose file which we are going to change a bit.
+###2 - Setup your Docker Compose file
 
-Put the following content in the `docker-compose.yml` file.
+In their [docs](http://docs.graylog.org/en/2.0/pages/installation/docker.html) they provide a docker compose file which we are going to change a bit.
+
+You'll want to use the following setup in the `docker-compose.yml` file. Take note to replace passwords:
 ```
 version: '2.0'
 services:
@@ -55,6 +57,7 @@ services:
       - "12900:12900"
       - "12201/udp:12201/udp"
 ```
+A bit of explanation about what we just added to the compose file. 
 
 Graylog needs at least 3 ports to work properly:
 
@@ -66,7 +69,9 @@ Graylog needs at least 3 ports to work properly:
 
 If you are going to use more than one log source remember to add it as `portnumber:udp`
 
-3 - To spin it up run: `docker-compose up -d`
+###3 - Start docker compose
+
+To spin it up run: `docker-compose up -d`
 
 If you run `docker ps -a` you will see that the graylog container is not running, it happens because of the `GRAYLOG_REST_TRANSPORT_URI` env variable. The value in the docker-compose file needs to be updated with the current container ip.  Run:
 
@@ -76,9 +81,9 @@ You will see something like: `'IPAddress': '172.18.0.4'` take the ip and replace
 
 Run `docker-compose up -d` again
 
-4 - Let's setup nginx. 
+###4 - Setup nginx
 
-First take a look in how we work with nginx [here](add link) and update your docker-compose to:
+First take a look in how we use nginx [here](add link) with Docker Compose and update your `docker-compose.yml` to:
 ```
 version: '2.0'
 services:
@@ -146,7 +151,7 @@ password: admin
 
 In order to change the admin password you need to update the env variable `GRAYLOG_ROOT_PASSWORD_SHA2` with the content of: `echo -n yourpassword | shasum -a 256`
 
-5 - Set up the log input
+###5 - Set up the log input
 
 Right now you have Graylog running but it is useless without the logs from your application. To add them you have two options:
 
@@ -157,7 +162,7 @@ The [12Factor](http://12factor.net/logs) says:
 
 "A twelve-factor app never concerns itself with routing or storage of its output stream."
 
-In order to acomplish it we should use the first option, which is very easy with docker-compose. You just need to add the following piece inside the service that you want to log in your docker-compose.yml file.
+To follow that philosophy, we should use the first option, which is very easy with docker-compose. You just need to add the following snippet inside the service that you want to log in your docker-compose.yml file.
 
 ```
     logging:
@@ -167,9 +172,9 @@ In order to acomplish it we should use the first option, which is very easy with
         gelf-tag: "my application"
 ```
 
-6 - Securing your graylog application
+###6 - Securing your graylog application
 
-As Graylog doesn't offer an application_key you need to update your iptables to allow only inputs from your application server, to make it happen you need to run:
+As Graylog doesn't offer an application_key you need to update your iptables to allow only inputs from your application server. To do this, you need to run:
 
 `iptables -I PREROUTING 1 -t mangle ! -s your_application_ip -p tcp --dport 12201 -j DROP`
 
