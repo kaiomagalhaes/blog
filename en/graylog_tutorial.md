@@ -1,4 +1,4 @@
-Here at [Codelitt](http://www.codelitt.com/) we use the best self-hosted tool to centralize logs that we've found, which is  [Graylog](graylog.org). It has a rich web client with a lot of filters and graphics. They offer a good documentation to set it up, however as we strive to have [12Factor](12factor.net) compliant applications we've organized a HOW-TO with it and docker with docker-compose.
+Here at [Codelitt](http://www.codelitt.com/) we use the best self-hosted tool to centralize logs that we've found, which is  [Graylog](graylog.org). It has a rich web client with a lot of filters and graphics. They offer a good documentation to set it up, however as we strive to have [12Factor](12factor.net) compliant applications we've organized a HOW-TO with it and docker+docker-compose.
 
 In case you are setting up a new server take a look in our [server security practices](https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md) and remember to *not* set it up with the root admin.
 
@@ -14,7 +14,7 @@ wget https://raw.githubusercontent.com/Graylog2/graylog2-images/2.0/docker/confi
 wget https://raw.githubusercontent.com/Graylog2/graylog2-images/2.0/docker/config/log4j2.xml
 ```
 
-to grant read/write permissions run: `sudo chmod -R a+rw graylog/`
+To grant read/write permissions run: `sudo chmod -R a+rw graylog/`
 
 2 - In their [docs](http://docs.graylog.org/en/2.0/pages/installation/docker.html) they provide a docker compose file which we are going to change a bit.
 
@@ -150,7 +150,7 @@ In order to change the admin password you need to update the env variable `GRAYL
 
 Right now you have Graylog running but it is useless without the logs from your application. To add them you have two options:
 
- 1. Use graylog docker integration
+ 1. Use Graylog docker integration
  2. Use a library like [Ruby GELF](https://github.com/Graylog2/gelf-rb)
  
 The [12Factor](http://12factor.net/logs) says:
