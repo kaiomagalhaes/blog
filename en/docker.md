@@ -14,9 +14,7 @@ This guarantees that it will always run the same, regardless of the environment 
 
 So using it in the development and production environments we can assure that they will be the same and that ghost of "It works on my machine" will fade alway.
 
-Here we are going to explain how we develop and setup our servers to production.
-
-In this tutorial we are going use a Ruby on Rails application as example.
+Here we are going to explain how we develop and setup our servers to production with a Ruby on Rails application.
 
 First you need to [install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 
