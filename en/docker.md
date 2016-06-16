@@ -15,7 +15,7 @@ will always run the same, regardless of the environment it is running in.
 
 So using it in the development and production environments we can assure that they will be the same and that ghost of "It works on my machine" will fade alway.
 
-Here we are going to explain how we develop and setup our servers to production.
+Here we are going to explain how we develop and setup our applications to production.
 
 In this tutorial we are going use a Ruby on Rails application as example.
 
