@@ -6,7 +6,9 @@ To minimize this problem here at [Codelitt](http://codelitt.com) we develop and 
 What is Docker you ask? Let's use the description that they provide in their [site](https://www.docker.com/what-docker):
 
 ```
-Docker containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. This guarantees that it will always run the same, regardless of the environment it is running in.
+Docker containers wrap up a piece of software in a complete filesystem that contains everything 
+it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. 
+This guarantees that it will always run the same, regardless of the environment it is running in.
 ```
 **"It will always run the same"** it is like a salve in our old wounds.
 
