@@ -6,15 +6,15 @@ To minimize this problem here at [Codelitt](http://codelitt.com) we develop and 
 What is Docker you ask? Let's use the description that they provide in their [site](https://www.docker.com/what-docker):
 
 ```
-Docker containers wrap up a piece of software in a complete filesystem that contains everything 
-it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. 
-This guarantees that it will always run the same, regardless of the environment it is running in.
+Docker containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. This guarantees that it will always run the same, regardless of the environment it is running in.
 ```
 **"It will always run the same"** it is like a salve in our old wounds.
 
 So using it in the development and production environments we can assure that they will be the same and that ghost of "It works on my machine" will fade alway.
 
-Here we are going to explain how we develop and setup our servers to production with a Ruby on Rails application.
+Here we are going to explain how we develop and setup our servers to production.
+
+In this tutorial we are going use a Ruby on Rails application as example.
 
 First you need to [install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 
@@ -83,7 +83,7 @@ ADD ./ /share
 
 CMD cp config/database.yml.example config/database.yml
 ENV RAILS_ENV production
-ENV SECRET_KEY_BASE MY_UNSAFE_SECRET_KEY
+ENV SECRET_KEY_BASE 1c1sadfasfs61e0d320d63bcd30aac135fd32dc61b6ff471a30a05856f5331718af296597009df7aa1c40e6c76f9ef57529496106316dc254a6a7482ea98c228fefad3ef
 CMD rails s Puma -b 0.0.0.0 -e production -p 4000
 ```
 
@@ -93,3 +93,8 @@ If you are using UFW in your server (like we recommend) you should take a look o
 
 Build the container and there is your application running on production.
 
+#### Summary
+
+Now that you know the basics of docker you are able to develop in a alike production environment, however it is not because you running inside a docker container that your application is safe. [Here](www.codelitt.com/blog/pragmatic-approach-building-ruby-rails-apps-quickly-quality-code/) we explain how to improve security and a lot of other things for ruby/rails applications and as soon as possible we will post how we deploy our applications with security.
+
+If you want to know more about our best practices, take a look in our repository. We open source all of our policies and best practices as well as continue to add to them there.
