@@ -85,7 +85,7 @@ ADD ./ /share
 
 CMD cp config/database.yml.example config/database.yml
 ENV RAILS_ENV production
-ENV SECRET_KEY_BASE 1c1sadfasfs61e0d320d63bcd30aac135fd32dc61b6ff471a30a05856f5331718af296597009df7aa1c40e6c76f9ef57529496106316dc254a6a7482ea98c228fefad3ef
+ENV SECRET_KEY_BASE MY_UNSAFE_SECRET_KEY
 CMD rails s Puma -b 0.0.0.0 -e production -p 4000
 ```
 
