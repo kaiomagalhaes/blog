@@ -1,4 +1,4 @@
-Since the [Beginning of the time](https://upload.wikimedia.org/wikipedia/commons/c/c2/Lambda-Cold_Dark_Matter,_Accelerated_Expansion_of_the_Universe,_Big_Bang-Inflation.jpg) we have been sufering the **'But it is working in my machine'** curse. It happens because we are probably not going to deploy the application in our programmer computer and it happens to be 
+Since the [Beginning of the time](https://upload.wikimedia.org/wikipedia/commons/c/c2/Lambda-Cold_Dark_Matter,_Accelerated_Expansion_of_the_Universe,_Big_Bang-Inflation.jpg) we have been sufering from the **'But it is working in my machine'** curse. It happens because we are probably not going to deploy the application in our programmer computer and it happens to be 
 different than the production one, how can it be so different? In a lot of ways e.g: operational system, environment variables, installed dependencies and the list goes far beyond it.
 
 To minimize this problem here at [Codelitt](http://codelitt.com) we develop and deploy our applications inside docker containers.
