@@ -21,8 +21,6 @@ In this tutorial we are going use a Ruby on Rails application as example.
 
 First you need to [install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
 
-Development
-
 All of our applications have at least one Docker container, which has all the necessary information to build it.
 
 #### Development
