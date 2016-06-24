@@ -38,18 +38,53 @@ VOLUME ["/share"]
 
 # Install dependencies and rails-api
 RUN apt-get update \
-    && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/* \
     && gem install --no-rdoc --no-ri \
     rails-api
 
 WORKDIR /share
+
+CMD ["/bin/bash", "-l"]
 ```
 
 It is a Dockerfile for a Ruby application. Add it to you application's directory and build it. [Here](https://docs.docker.com/mac/step_four/) more information about how to do it.
 
-//TODO: Should quickly tell them how to build it. Doesn't take that long. 
-//TODO would be good to explain interactive containers. how you attach to them. etc
+### Running
+
+As it is a Ruby on Rails application you are probably going to need a database. Now you may be asking "Do I need to install a database on my machine?" and deep in your thoughts you know the answer, you don't need.
+
+Let's run a postgres database on docker
+
+`docker run --name myapp_db -e POSTGRES_PASSWORD=postgres -d postgres`
+
+This command will download a postgres image and run it, as well as open a the por 5432 for conections.
+
+Now let's run the application.
+
+First you need to build the application
+
+`docker build -t myapp .`
+
+
+And now you run it
+
+```
+docker run -d \
+-ti \
+--name myapp \
+-e MYAPP_DATABASE_PASSWORD=postgres \
+-e MYAPP_DATABASE_USER=postgres \
+-v $(pwd):/share \
+-p 3000:3000 \
+--link myapp_db:db myapp /bin/bash -l
+```
+
+Now you have the machine running. Oh but how do I access it? It is easy, just run:
+
+`docker exec -it myapp bash`
+
+As you have access to your application you just need to setup it e.g: `bundle install`, `rake db:create` and so on.
+
 
 It is simple as that. Now when you format your computer, work with a teammate, or switch from project to project, you only need to fire up a container. You don't need to install all the dependencies of your 20 projects to your host machine. All of the environment is contained in the container.
 
