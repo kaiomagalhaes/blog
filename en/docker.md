@@ -118,7 +118,7 @@ Note that we have setup the password in the command:
 
 To create the database run: `rake db:create && rake db:migrate` inside your machine.
 
-To run the application: rails s -p 3000 -b hostname -i
+To run the application: rails s -p 3000 -b \`hostname -i\`
 
 Now you can access your application in the address: `localhost:3000`
 
