@@ -57,7 +57,7 @@ Let's run a postgres database on docker
 
 `docker run --name myapp_db -e POSTGRES_PASSWORD=postgres -d postgres`
 
-This command will download a postgres image and run it, as well as open a the por 5432 for conections.
+This command will download a postgres image and run it, as well as open a the port 5432 for connections.
 
 Now let's run the application.
 
@@ -115,6 +115,12 @@ Note that we have setup the password in the command:
 -e MYAPP_DATABASE_PASSWORD=postgres \
 -e MYAPP_DATABASE_USER=postgres \
 ```
+
+To create the database run: `rake db:create && rake db:migrate` inside your machine.
+
+To run the application: `rails s -p 3000 -b `hostname -i`
+
+Now you can access your application in the address: `localhost:3000`
 
 It is simple as that. Now when you format your computer, work with a teammate, or switch from project to project, you only need to fire up a container. You don't need to install all the dependencies of your 20 projects to your host machine. All of the environment is contained in the container.
 
