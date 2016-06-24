@@ -51,17 +51,17 @@ It is a Dockerfile for a Ruby application. Add it to you application's directory
 
 ### Building
 
-As it is a Ruby on Rails application you are probably going to need a database. Now you may be asking "Do I need to install a database on my machine?" and deep in your thoughts you know the answer, you don't need.
+As it is a Ruby on Rails application you are probably going to need a database. Now normally at this point in a Rails app, you're going to have to install a database on your machine. The beauty of Docker is you no longer have to go through that pain. Just fire up a database container straight from the developers themselves!
 
 Let's run a postgres database on docker
 
 `docker run --name myapp_db -e POSTGRES_PASSWORD=postgres -d postgres`
 
-This command will download a postgres image and run it, as well as open a the port 5432 for connections.
+This command will download the official postgres image and run a container based on it, as well as open port 5432 for connections.
 
 Now let's run the application.
 
-First you need to build the application
+First you need to build the application image. Just like the postgres image, this will be the image that your container is based on.
 
 `docker build -t myapp .`
 
@@ -79,11 +79,13 @@ docker run -d \
 --link myapp_db:db myapp /bin/bash -l
 ```
 
-Now you have the machine running. Oh but how do I access it? It is easy, just run:
+Now you have the container running and connected to your database via the --link flag. the -p flag exposes port 3000 from the container to port 3000 on your host machine. Your environment variables are set via the -e flag. -ti gives you an interactive terminal waiting for you from within your container. -v is going to connect your current directory to the /share directory inside the container.
+
+Oh but how do I access it? It is easy, just run:
 
 `docker exec -it myapp bash`
 
-As you have access to your application you just need to setup it e.g: `bundle install`
+Now you'll be in the /share folder of your container which is shared with your application's directory on your host machine. You have access to your application from within the container! You just need to setup it e.g: bundle install, rake db:create and so on.
 
 To be able to create and work with the database you need to setup your config/database.yml to be like
 
