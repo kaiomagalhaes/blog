@@ -12,6 +12,7 @@ contains everything it needs to run: code, runtime, system tools,
 system libraries – anything you can install on a server. This guarantees that it 
 will always run the same, regardless of the environment it is running in.
 ```
+
 There are many benefits of Docker, but what has always stood out to us is the fact **"it will always run the same on any machine"**. It is like a salve in our old wounds. That ghost of "It works on my machine" fades away and we can focus on things that matter.
 
 We wanted to explain how we develop and setup our applications to production with Docker. We have a set of best practices and have automated our deployment and implemented [blue-green deploys](http://martinfowler.com/bliki/BlueGreenDeployment.html) with it, but in this first article we're going to cover getting Dockerfiles setup for a project. Dockerfiles are just a set of instructions which build the system in a predictable and repeatable way across engineers' machines (and production machines).  
@@ -24,7 +25,6 @@ All of our applications have at least one Docker container, which has all the ne
 
 #### Development
 
-`Dockerfile.development`
 ```
 # This is our DEVELOPMENT dockerfile.
 #
@@ -47,9 +47,9 @@ WORKDIR /share
 CMD ["/bin/bash", "-l"]
 ```
 
-It is a Dockerfile for a Ruby application. Add it to you application's directory and build it. [Here](https://docs.docker.com/mac/step_four/) more information about how to do it.
+It is a Dockerfile for a Ruby application. Add it to you application's directory and build it.
 
-### Running
+### Building
 
 As it is a Ruby on Rails application you are probably going to need a database. Now you may be asking "Do I need to install a database on my machine?" and deep in your thoughts you know the answer, you don't need.
 
@@ -83,8 +83,38 @@ Now you have the machine running. Oh but how do I access it? It is easy, just ru
 
 `docker exec -it myapp bash`
 
-As you have access to your application you just need to setup it e.g: `bundle install`, `rake db:create` and so on.
+As you have access to your application you just need to setup it e.g: `bundle install`
 
+To be able to create and work with the database you need to setup your config/database.yml to be like
+
+```
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  pool: 5
+  user: <%= ENV['MYAPP__DATABASE_USER'] %>
+  password: <%= ENV['MYAPP__DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: myapp_development
+
+test:
+  <<: *default
+  database: myapp_test
+
+production:
+  <<: *default
+  database: <%= ENV['MYAPP__DATABASE_NAME'] %>
+```
+
+Note that we have setup the password in the command: 
+
+```
+-e MYAPP_DATABASE_PASSWORD=postgres \
+-e MYAPP_DATABASE_USER=postgres \
+```
 
 It is simple as that. Now when you format your computer, work with a teammate, or switch from project to project, you only need to fire up a container. You don't need to install all the dependencies of your 20 projects to your host machine. All of the environment is contained in the container.
 
