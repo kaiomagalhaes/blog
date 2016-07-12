@@ -1,4 +1,4 @@
-Rspec Rails
+# Rspec Rails
 
 Repo:
   `https://github.com/rspec/rspec-rails`
