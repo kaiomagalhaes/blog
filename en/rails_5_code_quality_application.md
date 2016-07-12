@@ -5,7 +5,7 @@ Repo:
   
 What to do:
 
-remove the test folder
+remove the `test` folder
 
 setup your gemfile
 ```
