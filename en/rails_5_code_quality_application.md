@@ -57,3 +57,22 @@ Style/Documentation:
 ```
 
 Now run `rubocop` and start to fix the issues, it is easier if you run `rubocop -a`.
+
+# Rubocop-Rspec
+
+Repo:
+  `https://github.com/nevir/rubocop-rspec`
+  
+What to do:
+
+Add the following line in your .rubocop.yml
+
+`require: rubocop-rspec`
+
+setup your gemfile
+```
+group :development, :test do
+    gem 'rubocop-rspec'
+end
+
+```
