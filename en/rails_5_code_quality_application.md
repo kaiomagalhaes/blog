@@ -72,7 +72,28 @@ Add the following line in your .rubocop.yml
 setup your gemfile
 ```
 group :development, :test do
-    gem 'rubocop-rspec'
+    gem 'rubocop-rspec', :require => false
 end
 
 ```
+
+# Rubycritic
+
+Repo:
+  `https://github.com/whitesmith/rubycritic`
+  
+What to do:
+
+Add the following line in your .rubocop.yml
+
+`require: rubocop-rspec`
+
+setup your gemfile
+```
+group :development, :test do
+    gem 'rubocop-rspec'
+end
+```
+run
+
+`rubycritic`
