@@ -112,3 +112,19 @@ end
 run
 
 `brakeman`
+
+
+# Brakeman
+
+Repo:
+  `https://github.com/rubysec/bundler-audit`
+
+setup your gemfile
+```
+group :development, :test do
+    gem 'bundler-audit', :require => false
+end
+```
+run
+
+`bundler-audit`
