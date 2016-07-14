@@ -149,15 +149,3 @@ require 'simplecov'
 SimpleCov.start
 SimpleCov.minimum_coverage 90
 ```
-
-# Bullet
-
-Repo:
-  `https://github.com/flyerhzm/bullet`
-
-setup your gemfile
-```
-group :development do
-    gem 'bullet'
-end
-```
