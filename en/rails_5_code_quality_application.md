@@ -114,7 +114,7 @@ run
 `brakeman`
 
 
-# Brakeman
+# BUndler audit
 
 Repo:
   `https://github.com/rubysec/bundler-audit`
@@ -128,3 +128,24 @@ end
 run
 
 `bundler-audit`
+
+# Simplecov
+
+Repo:
+  `https://github.com/colszowka/simplecov`
+
+setup your gemfile
+```
+group :development, :test do
+    gem 'bundler-audit', :require => false
+end
+```
+do
+
+add the following content to your spec-helper
+
+```
+require 'simplecov'
+SimpleCov.start
+SimpleCov.minimum_coverage 90
+```
