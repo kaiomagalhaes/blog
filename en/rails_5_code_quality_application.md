@@ -84,10 +84,6 @@ Repo:
   
 What to do:
 
-Add the following line in your .rubocop.yml
-
-`require: rubocop-rspec`
-
 setup your gemfile
 ```
 group :development, :test do
@@ -97,3 +93,22 @@ end
 run
 
 `rubycritic`
+
+
+# Brakeman
+
+Repo:
+  `https://github.com/presidentbeef/brakeman`
+  
+What to do:
+
+
+setup your gemfile
+```
+group :development, :test do
+    gem 'brakeman', :require => false
+end
+```
+run
+
+`brakeman`
