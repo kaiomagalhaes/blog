@@ -26,7 +26,7 @@ Repo:
 Setup your gemfile 
 
 ```
-group :development do
+group :development, :test do
   gem 'rubocop', require: false
 end
 ```
