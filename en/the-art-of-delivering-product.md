@@ -14,15 +14,6 @@ When I started the real questions things got a little hot.
   
 2. How do you plan to enter in the market?
 
+  For some people it is hard to believe, but an application doesn't just appear in front of the end user and he loves it. It needs to appear somewere, someone needs to say that it is good. A software that isn't seen by the people who may want it is not going to be used by the ones who doesn't even know that it exists.
   
-
-And last but not less important
-
-3. Do you really need *EVERYTHING* of the final product to start it?
-
-I always let the last question for the final because:
-
-1. The first one isn't idea related, is about the money you think you are going to spend to make it happen.
-2. The second one dictates what you need done to start
-3. Here everything changes because of lack of knowledge or market study a lot of people think that a product in the market
-is always very well done and polished which most of the time is not the case.
+3. Do you really need *EVERYTHING* of the final product to validate your idea?
