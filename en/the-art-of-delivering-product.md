@@ -7,7 +7,7 @@ Now let's make some things clear, the final product that he had in mind cound be
 When I started the real questions things got a little hot.
 
 1. Do you have the money to build all of it?
-  For lack of proper knowledge some people tend to 
+  For lack of proper knowledge some people tend to believe that a piece of software is cheap. They forgot that developers need to be paid and it has some costs like servers, email services, merchandising and so on. 
 2. How do you plan to enter in the market?
 
 And last but not less important
