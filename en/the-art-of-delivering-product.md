@@ -7,8 +7,14 @@ Now let's make some things clear, the final product that he had in mind cound be
 When I started the real questions things got a little hot.
 
 1. Do you have the money to build all of it?
-  For lack of proper knowledge some people tend to believe that a piece of software is cheap. They forgot that developers need to be paid and it has some costs like servers, email services, merchandising and so on. 
+
+  For lack of proper knowledge some people tend to believe that a piece of software is cheap. They forgot that developers need to be paid as well as other things like servers, email services, merchandising and so on.
+
+  A recurring thing is that if you have an idea someone is going to put their money on it. If you check most of the startup pitch presentations you are going to see that most of the time the investiment is made in the person/execution and that the idea is just something in the middle. 
+  
 2. How do you plan to enter in the market?
+
+  
 
 And last but not less important
 
