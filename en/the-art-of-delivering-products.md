@@ -16,7 +16,7 @@ When I started asking the questions that mattered most things got a little hot.
 
   Because of the lack of knowledge some people tend to believe that a piece of software is cheap. They forget that developers need to be paid as well as other things like servers, email services, merchandising and so on.
 
-  A recurring teory is that if you have an idea someone is going to put their moneyinto it. If you check most of the startup pitch presentations you are going to notice that most of the time the investiment is made in person/execution and that the idea is just something in the middle of it.
+  A recurring teory is that if you have an idea someone is going to put their money into it. If you check most of the startup pitch presentations you are going to notice that most of the time the investment is made in person/execution and that the idea is just something in the middle of it.
   
 3. How do you plan to enter in the market?
 
@@ -24,9 +24,9 @@ When I started asking the questions that mattered most things got a little hot.
   
 Now the answers that he gave me:
 
-1. Yes, because the competitors have some refinated products and yes he is in the [red ocean](https://en.wikipedia.org/wiki/Blue_Ocean_Strategy)
-2. No but I can get some investiment
-3. Not yet, but it is going to be worked as soon as we have the product to show to some potential clients
+1. Yes, because the competitors have some refinated products and yes he is in the [red ocean](https://en.wikipedia.org/wiki/Blue_Ocean_Strategy).
+2. No, but I can get people to invest.
+3. Not yet, but it is going to be worked out as soon as we have the product to show to some potential clients
 
 So now let's see how we should approach a product in order to have it delivered
 
