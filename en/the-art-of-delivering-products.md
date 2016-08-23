@@ -1,6 +1,6 @@
 The good and at the same time bad thing about being a software engineer in the information era is that a lot of people want you to validate their big ideas. Ideas which are almost always to make millions as a lot of startups are *easily* doing. Since the majority of the rockstar startups were created upon simple ideas like WhatsApp, Snapchat, Instagram and so on, some people tend to believe that a thought is all that is needed to have success, which couldn't be more away from the truth.
 
-Last week a friend asked me for a meeting because he wanted to talk about a big idea that was *Insert your big idea here*. He kept saying that everyone who he had spoken to told that it was great and he could make a lot of money from it. There he convinced me, the idea was good.
+Last week a friend asked me for a meeting because he wanted to talk about a big idea that was *Insert your big idea here*. He kept saying that everyone who he had spoken to, told him that it was great and he could make a lot of money from it. There he convinced me, the idea was good.
 
 Now let's make some things clear, the final product that he had in mind could be good **if** and only if it was well created and the proccess well executed. He could get rich, but again, it is not only about the idea itself.
 
