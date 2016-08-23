@@ -14,7 +14,7 @@ When I started asking the questions that mattered most things got a little hot.
 
 2. Do you have the money to build all of it?
 
-  For lack of proper knowledge some people tend to believe that a piece of software is cheap. They forget that developers need to be paid as well as other things like servers, email services, merchandising and so on.
+  Because of the lack of knowledge some people tend to believe that a piece of software is cheap. They forget that developers need to be paid as well as other things like servers, email services, merchandising and so on.
 
   A recurring phenomenon is that if you have an idea someone is going to put their money on it. If you check most of the startup pitch presentations you are going to see that most of the time the investiment is made in the person/execution and that the idea is just something in the middle of it.
   
