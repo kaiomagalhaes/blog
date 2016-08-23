@@ -22,3 +22,8 @@ When I started the real questions things got a little hot.
 
   For some people it is hard to believe that an application doesn't just appear in front of the end user and he loves it. It has to be seen somewere, someone needs to say that it is good. A software that isn't seen by the people who may want it is not going to be used by the ones who doesn't even know that it exists.
   
+Now the questions that he gave me:
+
+1. Yes, because the competitors have some refinated products and yes he is in the [red ocean](https://en.wikipedia.org/wiki/Blue_Ocean_Strategy)
+2. No but I can get some investiment
+3. Not yet, but it is going to be worked as soon as we have the product to show to some potential clients
