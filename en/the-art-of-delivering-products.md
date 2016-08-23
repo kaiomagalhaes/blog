@@ -28,7 +28,7 @@ Now the answers that he gave me:
 2. No, but I can get people to invest.
 3. Not yet, but it is going to be worked out as soon as we have the product to show to some potential clients
 
-Not good ones as you may notice. So now let's see how we should approach a product in order to have it delivered.
+Not good ones as you may notice. In the next part of the post I'm going to show how to start and deliver a product.
 
 #### MVP
 
@@ -49,3 +49,5 @@ As you can see the MVP is a minimum workable product where you can validate your
 3. Am I able to create innovation?
 
 If you answer yes for all the three questions you have a MVP.
+
+
