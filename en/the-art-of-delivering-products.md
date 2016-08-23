@@ -32,13 +32,13 @@ Not good ones as you may notice. So now let's see how we should approach a produ
 
 #### MVP
 
-  It stands for Minimum Viable Product and it is not for software only, but for products in general.
+It stands for Minimum Viable Product and it is not for software only, but for products in general.
   
-  ##### Like a boat
+##### Like a boat
   
-  ![An MVP example](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/Minimum-Viable-Product-2-848x458.png)
+![An MVP example](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/Minimum-Viable-Product-2-848x458.png)
   
-  ##### Or even a Donut
-  ![An MVP example](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/Minimum-Viable-Product-3.jpg)
+##### Or even a Donut
+![An MVP example](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/Minimum-Viable-Product-3.jpg)
   
   
