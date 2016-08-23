@@ -20,7 +20,7 @@ When I started asking the questions that mattered most things got a little hot.
   
 3. How do you plan to enter in the market?
 
-  For some people it is hard to believe that an application doesn't just appear in front of the end user and he loves it. It has to be seen somewere, someone needs to say that it is good. A software that isn't seen by the people who may want it is not going to be used by the ones who doesn't even know that it exists.
+  For some people it is hard to believe that an application doesn't just appear in front of the end user and he loves it. It has to be seen somewhere, someone needs to say that it is good. A software that isn't seen by people who may want it isn't going to be used by the ones who don't even know that it exists.
   
 Now the questions that he gave me:
 
