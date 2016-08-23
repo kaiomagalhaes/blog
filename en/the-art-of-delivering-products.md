@@ -2,7 +2,7 @@ The good and at the same time bad thing about being a software engineer in the i
 
 Last week a friend asked me for a meeting because he wanted to talk about a big idea that was *Insert your big idea here*. He kept saying that everyone who he had spoken to, told him that it was great and he could make a lot of money from it. There he convinced me, the idea was good.
 
-Now let's make some things clear, the final product that he had in mind could be good **if** and only if it was well created and the process well executed. He could get rich, but again, this is not only because the idea itself.
+Now let's make some things clear, the final product that he had in mind could be good **if** and only if it was well created and the process well executed. He could get rich, but again, this is not only because of the idea itself.
 
 When I started the real questions things got a little hot.
 
