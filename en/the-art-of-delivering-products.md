@@ -42,3 +42,10 @@ It stands for Minimum Viable Product and it is not for software only, but for pr
 ![An MVP example](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/Minimum-Viable-Product-3.jpg)
   
   
+As you can see the MVP is a minimum workable product where you can validate your idea, to define it you need to answer the following questions:
+
+1. Is it the minimum demanded to get my final user attention?
+2. Am I able to get some potential users feedbacks?
+3. Am I able to create innovation?
+
+If you answer yes for all the three questions you have a MVP.
