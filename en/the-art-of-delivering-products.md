@@ -16,7 +16,7 @@ When I started asking the questions that mattered most things got a little hot.
 
   Because of the lack of knowledge some people tend to believe that a piece of software is cheap. They forget that developers need to be paid as well as other things like servers, email services, merchandising and so on.
 
-  A recurring teory is that if you have an idea someone is going to put their money on it. If you check most of the startup pitch presentations you are going to see that most of the time the investiment is made in the person/execution and that the idea is just something in the middle of it.
+  A recurring teory is that if you have an idea someone is going to put their moneyinto it. If you check most of the startup pitch presentations you are going to notice that most of the time the investiment is made in person/execution and that the idea is just something in the middle of it.
   
 3. How do you plan to enter in the market?
 
