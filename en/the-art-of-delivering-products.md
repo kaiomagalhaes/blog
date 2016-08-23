@@ -28,6 +28,11 @@ Now the answers that he gave me:
 2. No, but I can get people to invest.
 3. Not yet, but it is going to be worked out as soon as we have the product to show to some potential clients
 
-So now let's see how we should approach a product in order to have it delivered
+Not good ones as you may notice. So now let's see how we should approach a product in order to have it delivered.
 
 #### MVP
+
+  It stands for Minimum Viable Product and it is not for software only, but for products in general.
+  
+  ![An MVP example](https://raw.githubusercontent.com/kaiomagalhaes/blog/master/en/images/Minimum-Viable-Product-2-848x458.png)
+  
