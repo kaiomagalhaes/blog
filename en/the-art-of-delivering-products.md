@@ -4,7 +4,7 @@ Last week a friend asked me for a meeting because he wanted to talk about a big 
 
 Now let's make some things clear, the final product that he had in mind could be good **if** and only if it was well created and the process well executed. He could get rich, but again, this is not only because of the idea itself.
 
-When I started the real questions things got a little hot.
+When I started asking the questions that mattered most things got a little hot.
 
 1. Do you really need *EVERYTHING* of the final product to validate your idea?
 
